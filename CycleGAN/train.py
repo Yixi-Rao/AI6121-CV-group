@@ -9,7 +9,7 @@ Programmed by Aladdin Persson <aladdin.persson at hotmail dot com>
 import torch
 from dataset import CycleGAN_Dataset
 
-from utils import save_checkpoint, load_checkpoint
+from utils import save_checkpoint, load_checkpoint, save_scheduler, load_scheduler
 from torch.utils.data import DataLoader
 import torch.nn as nn
 import torch.optim as optim
@@ -20,7 +20,7 @@ from discriminator_model import Discriminator
 from generator_model import Generator
 
 
-def train_fn(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, l1, mse, d_scaler, g_scaler):
+def train_one_epoch(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, l1, mse, d_scaler, g_scaler):
     ''' GT: S -> T
         GS: T -> S
         DT: distinguish T from fake GT(S) and real T
@@ -108,7 +108,7 @@ def train_fn(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, l1, mse, d
         g_scaler.step(opt_gen)
         g_scaler.update()
 
-        if idx % 200 == 0:
+        if idx % 100 == 0:
             # denormalize
             save_image(fake_target * 0.5 + 0.5, f"saved_images/target_{idx}.png")
             save_image(fake_source * 0.5 + 0.5, f"saved_images/source_{idx}.png")
@@ -116,12 +116,36 @@ def train_fn(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, l1, mse, d
         loop.set_postfix(H_real=T_reals / (idx + 1), H_fake=T_fakes / (idx + 1))
 
 def main():
+    resume   = config.RESUME
+    stage    = config.LOAD_MODEL_STAGE
+    max_e    = config.NUM_EPOCHS
+    resume_e = 0
+    
+    # dataset
+    dataset = CycleGAN_Dataset(
+        root_t=config.TRAIN_DIR + "/targets",
+        root_s=config.TRAIN_DIR + "/sources",
+        trans=config.transforms,
+        start=0,
+        end=2000
+    )
+    
+    loader = DataLoader(
+        dataset,
+        batch_size=config.BATCH_SIZE,
+        shuffle=True,
+        num_workers=config.NUM_WORKERS,
+        pin_memory=True,
+    )
+    
+    # Networks
     disc_T = Discriminator(in_channels=3).to(config.DEVICE)
     disc_S = Discriminator(in_channels=3).to(config.DEVICE)
     
     gen_S = Generator(img_channels=3, num_residuals=9).to(config.DEVICE)
     gen_T = Generator(img_channels=3, num_residuals=9).to(config.DEVICE)
     
+    # Learning rate
     opt_disc = optim.Adam(
         list(disc_T.parameters()) + list(disc_S.parameters()),
         lr=config.LEARNING_RATE,
@@ -133,74 +157,56 @@ def main():
         lr=config.LEARNING_RATE,
         betas=(0.5, 0.999),
     )
+    
+    sch_disc_decay = optim.lr_scheduler.CosineAnnealingLR(opt_disc, max_e)
+    sch_gen_decay  = optim.lr_scheduler.CosineAnnealingLR(opt_gen, max_e)
 
+    # Loss function
     L1  = nn.L1Loss()
     mse = nn.MSELoss()
 
-    if config.LOAD_MODEL:
-        load_checkpoint(
-            config.CHECKPOINT_GEN_T,
-            gen_T,
-            opt_gen,
-            config.LEARNING_RATE,
-        )
-        load_checkpoint(
-            config.CHECKPOINT_GEN_S,
-            gen_S,
-            opt_gen,
-            config.LEARNING_RATE,
-        )
-        load_checkpoint(
-            config.CHECKPOINT_CRITIC_T,
-            disc_T,
-            opt_disc,
-            config.LEARNING_RATE,
-        )
-        load_checkpoint(
-            config.CHECKPOINT_CRITIC_S,
-            disc_S,
-            opt_disc,
-            config.LEARNING_RATE,
-        )
+    # Resume?
+    if resume:
+        if stage == 1:
+            load_checkpoint(config.CHECKPOINT_GEN_T, gen_T, opt_gen, config.LEARNING_RATE)
+            load_checkpoint(config.CHECKPOINT_GEN_S, gen_S, opt_gen, config.LEARNING_RATE)
+            load_checkpoint(config.CHECKPOINT_CRITIC_T, disc_T, opt_disc, config.LEARNING_RATE)
+            resume_e = load_checkpoint(config.CHECKPOINT_CRITIC_S, disc_S, opt_disc, config.LEARNING_RATE)
+        else:
+            load_checkpoint(config.CHECKPOINT_GEN_T, gen_T, opt_gen, config.LEARNING_RATE)
+            load_checkpoint(config.CHECKPOINT_GEN_S, gen_S, opt_gen, config.LEARNING_RATE)
+            load_checkpoint(config.CHECKPOINT_CRITIC_T, disc_T, opt_disc, config.LEARNING_RATE)
+            resume_e = load_checkpoint(config.CHECKPOINT_CRITIC_S, disc_S, opt_disc, config.LEARNING_RATE)
+            
+            load_scheduler(config.CHECKPOINT_schLR_D, sch_disc_decay)
+            load_scheduler(config.CHECKPOINT_schLR_G, sch_gen_decay)
     
-    # val_dataset = CycleGAN_Dataset(
-    #     root_t="cyclegan_test/target1",
-    #     root_s="cyclegan_test/source1",
-    #     trans=config.transforms,
-    # )
-    
-    # val_loader = DataLoader(
-    #     val_dataset,
-    #     batch_size=1,
-    #     shuffle=False,
-    #     pin_memory=True,
-    # )
-    
-    dataset = CycleGAN_Dataset(
-        root_t=config.TRAIN_DIR + "/targets",
-        root_s=config.TRAIN_DIR + "/sources",
-        trans=config.transforms,
-    )
-    
-    loader = DataLoader(
-        dataset,
-        batch_size=config.BATCH_SIZE,
-        shuffle=True,
-        num_workers=config.NUM_WORKERS,
-        pin_memory=True,
-    )
-    
+    # float16 setup
     g_scaler = torch.cuda.amp.GradScaler()
     d_scaler = torch.cuda.amp.GradScaler()
 
-    for _ in range(config.NUM_EPOCHS):
-        train_fn(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, L1, mse, d_scaler, g_scaler)
-
+    for e in range(resume_e if resume and stage == 1 else 0, 0 if resume and stage == 2 else max_e):
+        print(f'stage 1 - epoch {e}')
+        train_one_epoch(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, L1, mse, d_scaler, g_scaler)
         if config.SAVE_MODEL:
-            save_checkpoint(gen_T, opt_gen, filename=config.CHECKPOINT_GEN_T)
-            save_checkpoint(gen_S, opt_gen, filename=config.CHECKPOINT_GEN_S)
-            save_checkpoint(disc_T, opt_disc, filename=config.CHECKPOINT_CRITIC_T)
-            save_checkpoint(disc_S, opt_disc, filename=config.CHECKPOINT_CRITIC_S)
+            save_checkpoint(e + 1, gen_T, opt_gen, filename=config.CHECKPOINT_GEN_T)
+            save_checkpoint(e + 1, gen_S, opt_gen, filename=config.CHECKPOINT_GEN_S)
+            save_checkpoint(e + 1, disc_T, opt_disc, filename=config.CHECKPOINT_CRITIC_T)
+            save_checkpoint(e + 1, disc_S, opt_disc, filename=config.CHECKPOINT_CRITIC_S)
+    
+    for e in range(resume_e if resume and stage == 2 else 0, max_e):
+        print(f'stage 2 - epoch {e}')
+        train_one_epoch(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, L1, mse, d_scaler, g_scaler)
+        sch_disc_decay.step()
+        sch_gen_decay.step()
+        if config.SAVE_MODEL:
+            save_checkpoint(e + 1, gen_T, opt_gen, filename=config.CHECKPOINT_GEN_T)
+            save_checkpoint(e + 1, gen_S, opt_gen, filename=config.CHECKPOINT_GEN_S)
+            save_checkpoint(e + 1, disc_T, opt_disc, filename=config.CHECKPOINT_CRITIC_T)
+            save_checkpoint(e + 1, disc_S, opt_disc, filename=config.CHECKPOINT_CRITIC_S)
+            
+            save_scheduler(sch_disc_decay, config.CHECKPOINT_schLR_D)
+            save_scheduler(sch_gen_decay, config.CHECKPOINT_schLR_G)
 
 if __name__ == "__main__":
     main()

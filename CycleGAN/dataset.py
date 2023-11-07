@@ -5,17 +5,17 @@ from torch.utils.data import Dataset
 import numpy as np
 
 class CycleGAN_Dataset(Dataset):
-    def __init__(self, root_s, root_t, trans=None):
+    def __init__(self, root_s, root_t, trans=None, start=0, end=2000):
         self.root_s = root_s
         self.root_t = root_t
         self.trans  = trans
-
-        self.sourse_dir = os.listdir(root_s)
-        self.target_dir = os.listdir(root_t)
+        
+        self.sourse_dir = os.listdir(root_s)[start: end + 1]
+        self.target_dir = os.listdir(root_t)[start: end + 1]
         
         self.dataset_len = max(len(self.sourse_dir), len(self.target_dir))
-        self.source_len  = len(self.sourse_dir)
-        self.target_len  = len(self.target_dir)
+        self.source_len  = end - start
+        self.target_len  = end - start
 
     def __len__(self):
         return self.dataset_len

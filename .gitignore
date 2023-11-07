@@ -1,7 +1,16 @@
-CycleGAN/data/archive (1).zip
-CycleGAN/data/archive.zip
-CycleGAN/data/archive (1)
+CycleGAN/data
 papers/1703.10593.pdf
 papers/MSAI Project on Image Translation and UDA.pdf
 papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf
 .vscode/settings.json
+CycleGAN/__pycache__/config.cpython-311.pyc
+CycleGAN/__pycache__/dataset.cpython-311.pyc
+CycleGAN/__pycache__/discriminator_model.cpython-311.pyc
+CycleGAN/__pycache__/generator_model.cpython-311.pyc
+CycleGAN/__pycache__/utils.cpython-311.pyc
+CycleGAN/saved_models/criticS.pth.tar
+CycleGAN/saved_models/criticT.pth.tar
+CycleGAN/saved_models/genS.pth.tar
+CycleGAN/saved_models/genT.pth.tar
+CycleGAN/saved_models/schLRD.pth.tar
+CycleGAN/saved_models/schLRG.pth.tar
