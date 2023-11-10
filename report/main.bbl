@@ -23,4 +23,13 @@
 \bibitem{zhu2017unpaired}
 J.-Y. Zhu, T.~Park, P.~Isola, and A.~A. Efros, ``Unpaired image-to-image translation using cycle-consistent adversarial networks,'' in \emph{Proceedings of the IEEE international conference on computer vision}, 2017, pp. 2223--2232.
 
+\bibitem{CycleGANcode}
+A.~Persson, ``A clean, simple and readable implementation of cyclegan in pytorch,'' \url{https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/GANs/CycleGAN}, accessed: 2023-11-10.
+
+\bibitem{richter2016playing}
+S.~R. Richter, V.~Vineet, S.~Roth, and V.~Koltun, ``Playing for data: Ground truth from computer games,'' 2016.
+
+\bibitem{cordts2016cityscapes}
+M.~Cordts, M.~Omran, S.~Ramos, T.~Rehfeld, M.~Enzweiler, R.~Benenson, U.~Franke, S.~Roth, and B.~Schiele, ``The cityscapes dataset for semantic urban scene understanding,'' in \emph{Proceedings of the IEEE conference on computer vision and pattern recognition}, 2016, pp. 3213--3223.
+
 \end{thebibliography}

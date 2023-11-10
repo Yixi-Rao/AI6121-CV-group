@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.25)  10 NOV 2023 18:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.25)  11 NOV 2023 00:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -364,35 +364,75 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
+) (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/pythonhighlight/pythonhighlight.sty
+Package: pythonhighlight 2017/02/09 python code highlighting; provided by Olivier Verdier <olivier.verdier@gmail.com>
+ (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count299
+\lst@gtempboxa=\box57
+\lst@token=\toks31
+\lst@length=\count300
+\lst@currlwidth=\dimen181
+\lst@column=\count301
+\lst@pos=\count302
+\lst@lostspace=\dimen182
+\lst@width=\dimen183
+\lst@newlines=\count303
+\lst@lineno=\count304
+\lst@maxwidth=\dimen184
+ (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count305
+\lst@skipnumbers=\count306
+\lst@framebox=\box58
+) (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 22.
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+))
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 23.
  (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count299
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count307
+\l__pdf_internal_box=\box59
 ) (./main.aux (./Title/titlepage.aux) (./Section1/Section1.aux) (./Section2/Section2.aux) (./Section3/Section3.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -430,38 +470,34 @@ LaTeX Font Info:    ... okay on input line 22.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (s:/LaTeX/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count300
-\scratchdimen=\dimen181
-\scratchbox=\box58
-\nofMPsegments=\count301
-\nofMParguments=\count302
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count303
-\MPscratchDim=\dimen182
-\MPnumerator=\count304
-\makeMPintoPDFobject=\count305
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count308
+\scratchdimen=\dimen185
+\scratchbox=\box60
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen186
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks33
 ) (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
- (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 22.
+))
+Package hyperref Info: Link coloring ON on input line 23.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
+\c@lstlisting=\count314
 \openout2 = `Title/titlepage.aux'.
 
  (./Title/titlepage.tex
@@ -504,7 +540,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 \include{Section1/Section1}
+l.32 \include{Section1/Section1}
                                  [1
 
 
@@ -526,14 +562,38 @@ Package pdftex.def Info: Section2/cycleGAN.png  used on input line 13.
 
 
 
- <./Section2/cycleGAN.png (PNG copy)>] [4])
+ <./Section2/cycleGAN.png (PNG copy)>] (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 49.
+ (s:/LaTeX/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [4] [5]
+Overfull \hbox (8.82272pt too wide) in paragraph at lines 117--119
+[]\OT1/ptm/m/n/12 We build the gen-er-a-tor net-work as: ``c7s1-64,d128,d256,R256,R256,R256,R256, R256,R256,
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 139.
+(s:/LaTeX/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [6] [7] [8])
 \openout2 = `Section3/Section3.aux'.
 
- (./Section3/Section3.tex [5
+ (./Section3/Section3.tex [9
 
 
 
-]) (./main.bbl) [6
+]) (./main.bbl
+Underfull \hbox (badness 2951) in paragraph at lines 27--28
+[]\OT1/ptm/m/n/12 A. Pers-son, ``A clean, sim-ple and read-able im-ple-men-ta-tion of cy-cle-gan in py-
+ []
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 27--28
+\OT1/ptm/m/n/12 torch,'' [][]$https : / / github . com / aladdinpersson / Machine-[]Learning-[]Collection / tree / master / ML /
+ []
+
+) [10
 
 
 ] (./main.aux (./Title/titlepage.aux) (./Section1/Section1.aux) (./Section2/Section2.aux) (./Section3/Section3.aux))
@@ -545,18 +605,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F82D7D76132150C8633A54523BB27BE2;1741.
  ) 
 Here is how much of TeX's memory you used:
- 12085 strings out of 474928
- 193299 string characters out of 5760544
- 1926785 words of memory out of 5000000
- 33374 multiletter control sequences out of 15000+600000
- 587294 words of font info for 94 fonts, out of 8000000 for 9000
+ 14884 strings out of 474928
+ 229439 string characters out of 5760544
+ 2198785 words of memory out of 5000000
+ 36029 multiletter control sequences out of 15000+600000
+ 590277 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,866b,500s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 447581 bytes).
+ 75i,6n,79p,866b,1587s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (11 pages, 508992 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
+ 141 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 

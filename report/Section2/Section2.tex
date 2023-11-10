@@ -37,19 +37,195 @@ Therefore, the full objective function can be defined as:
 \end{equation}
 
 \begin{equation}
-    \mathcal{L}(G,F,D_T,D_S) = \mathcal{L}_{GAN}(G,D_T,S,T) + \mathcal{L}_{GAN}(G,D_S,T,S) + \mathcal{L}_{cyc}(G,F)
+    \mathcal{L}(G,F,D_T,D_S) = \mathcal{L}_{GAN}(G,D_T,S,T) + \mathcal{L}_{GAN}(G,D_S,T,S) + \lambda \mathcal{L}_{cyc}(G,F)
 \end{equation}
 
 \subsection{Implementation}
+We have organized the implementation of CycleGAN into four steps. The first step is to define the dataset and pre-processing, the second step is to define the discriminator model, the third step is to define the generator model, and the fourth step is to define the training for CycleGAN.\@ We use Pytorch to implement CycleGAN and refer to the source code of Zhu et al~\cite{zhu2017unpaired} and Aladdin's code reproduction~\cite{CycleGANcode}. Here we only present the core codes, please check the source code for detailed implementation.
 
 \subsubsection{Dataset \& Pre-processing}
-What data set do you choose to use
+We use the GTA5 video game street view from~\cite{richter2016playing} as the original dataset $S$ and the real cityscape dataset from~\cite{cordts2016cityscapes} as the $T$ dataset, so our goal is to convert the GTA5 video game street view image into a real street view style image. The image augmentation we use is, to resize the image to 180 $\times$ 360, then use horizontal flip on the image with $p = 0.5$, and finally normalize all the image channels to have a mean of 0.5 and standard deviation of 0.5. Finally, convert it to tensor. The detailed implementation is shown below.
+
+\begin{python}
+A.Compose([A.Resize(width=360, height=180),
+                    A.HorizontalFlip(p=0.5),
+                    A.Normalize(mean=[0.5, 0.5, 0.5],
+                                std=[0.5, 0.5, 0.5], 
+                                max_pixel_value=255),
+                    ToTensorV2()])
+\end{python}
 
 \subsubsection{Discriminator Model}
+The implementation of discriminator architectures follows the paper description of Zhu et al., who use 70 $\times$ 70 PatchGAN as the discriminator model. Define \pyth{Ck} as 4 $\times$ 4 Convolution-InstanceNorm-LeakyReLU layer with k filters and stride 2. We use Pytorch's \pyth{nn.Module} to define \pyth{Ck} block class:
+
+\begin{python}
+self.conv = nn.Sequential(
+    nn.Conv2d(
+        in_channels, 
+        out_channels,
+        4, 
+        stride, 
+        1, 
+        bias=True,
+        padding_mode="reflect"
+    ),
+    nn.InstanceNorm2d(out_channels),
+    nn.LeakyReLU(0.2, inplace=True)
+)
+\end{python}
+
+We then connect four \pyth{Ck} blocks in the order of C64-C128-C256-C512 as the discriminator architecture, where the C64 block does not use the InstanceNorm layer.\ Finally we use a convolution to produce a 1-dimensional output and add the sigmoid function.
 
 \subsubsection{Generator Model}
+The Generator architecture used by Zhu et al.\  consists of a convolution block and a residual block, where the convolution block is divided into downsampling and upsampling blocks. In the following, we use \pyth{nn.Module} define convolution block as:
+
+\begin{python}
+# Downsampling layers or upsampling layers
+self.conv = nn.Sequential(
+    nn.Conv2d(in_channels, 
+              out_channels, 
+              padding_mode="reflect", 
+              **kwargs) 
+              if down
+              else 
+              nn.ConvTranspose2d(in_channels,
+                                 out_channels, 
+                                 **kwargs),
+    nn.InstanceNorm2d(out_channels),
+    nn.ReLU(inplace=True) if use_act else nn.Identity()
+)
+\end{python}
+
+Based on this convolution block class, we can define three types of convolution blocks. The first is the \pyth{c7s1-k} block, which uses a 7 $\times$ 7 Convolution-InstanceNorm-ReLU layer with k filters and stride 1. The second is the downsampling block \pyth{dk}, which uses a 3 $\times$ 3 Convolution-InstanceNorm-ReLU layer with k filters and stride 2. The third is the upsampling block \pyth{uk}, which is a 3 $\times$ 3 fractional-strided-Convolution-InstanceNorm-ReLU layer with k filters and stride $\frac{1}{2}$.
+
+For residual block, it is two 3 $\times$ 3 convolutional layers with the same number of filters on both layer. We defined it as the residual block (below) class using \pyth{nn.Module}. The \pyth{forward} function is \pyth{return x + self.block(x)}.
+
+\begin{python}
+self.block = nn.Sequential(
+    ConvBlock(channels,
+              channels, 
+              kernel_size=3, 
+              padding=1),
+    ConvBlock(channels, 
+              channels, 
+              use_act=False, 
+              kernel_size=3, 
+              padding=1)
+)
+\end{python}
+
+We build the generator network as: ``c7s1-64,d128,d256,R256,R256,R256,R256, R256,R256, R256, R256, R256, R256, R256, R256, R256, R256, u128
+u64,c7s1-3'', and followed by a tanh activation function.
+
+\begin{python}
+# c7s1-64
+x = self.initial(x)
+# d128,d256
+for layer in self.down_blocks:
+    x = layer(x)
+# R256,R256,R256,R256,R256,R256,R256,R256,R256
+x = self.res_blocks(x)
+# u128 u64
+for layer in self.up_blocks:
+    x = layer(x)
+# c7s1-3
+return torch.tanh(self.last(x))
+\end{python}
 
 \subsubsection{Training}
+When implementing training, we adopted Zhu et al.`s training details and their recommended settings, such as training parameter settings:
+
+\begin{itemize}
+    \item Use a batch size of 2 to prevent out of memory.
+    \item A total of 200 epochs are trained, of which the learning rate is kept constant for 100 epochs, and the decay learning rate strategy is used for the other 100 epochs. Here we use the cosine annealing learning rate strategy.
+    \item Set the initial learning rate to 0.0002
+    \item Set cycle consistent control factor $\lambda = 10$
+    \item Use Adam solver
+\end{itemize}
+
+At the same time, we adopt their recommended improvement techniques, such as using least-squares loss to replace the negative log likelihood objective in $\mathcal{L}_{GAN}$. This loss is more stable during training and generates higher quality results. Therefore, the new goal will be:
+
+\begin{itemize}
+    \item When training $G$ or $F$: minimize 
+    \[\mathbb{E}_{s \sim p_{data(s)}}[{(D_T(G(s)) - 1)}^2] +\] 
+    \[\mathbb{E}_{t \sim p_{data(t)}}[{(D_S(F(t)) - 1)}^2] +\] 
+    \[\mathcal{L}_{cyc}(G,F)\]
+    \item When training $D_S$ or $D_T$: minimise 
+    \[\mathbb{E}_{s \sim p_{data(s)}}[{(D_S(s) - 1)}^2] + \mathbb{E}_{t \sim p_{data(t)}}[{D_S(F(t))}^2] +\] 
+    \[\mathbb{E}_{t \sim p_{data(t)}}[{(D_T(t) - 1)}^2] + \mathbb{E}_{s \sim p_{data(s)}}[{D_T(G(s))}^2]\]
+\end{itemize}
+
+Following the above training setting, for each batch images (source, target), we first train the discriminators $D_T$ and $D_S$. We can obtain two discriminators' result by using corresponding generators.
+
+\begin{python}
+# Patch: DT(T) and DT(GT(S))
+DT_real = disc_T(target)
+DT_fake = disc_T(gen_T(source))
+
+# Patch: DS(S) and DS(GS(T))
+DS_real = disc_S(source)
+DS_fake = disc_S(gen_S(target))
+\end{python}
+
+And then we can calculate the $\mathcal{L}_{GAN}$ losses with respect to discriminators $D_T$ and $D_S$.
+
+\begin{python}
+# L_GAN(GT,DT,S,T) = minimize Et[(DT(t) - 1)^2] + Es[DT(GT(s))^2]
+DT_real_loss = mse(DT_real, torch.ones_like(DT_real))
+DT_fake_loss = mse(DT_fake, torch.zeros_like(DT_fake))
+# L_GAN(GT,DT,S,T)
+DT_loss = DT_real_loss + DT_fake_loss
+
+# L_GAN(GS,DS,S,T) = minimize Es[(DS(s) - 1)^2] + Et[DS(GS(t))^2]
+DS_real_loss = mse(DS_real, torch.ones_like(DS_real))
+DS_fake_loss = mse(DS_fake, torch.zeros_like(DS_fake))
+# L_GAN(GS,DS,S,T) 
+DS_loss = DS_real_loss + DS_fake_loss
+\end{python}
+
+Finally, we put it together to get the total adversarial loss, and then train the model with the defined optimizer to opitmize discriminators.
+
+\begin{python}
+# put it togethor: L_GAN(GT,DT,S,T) + L_GAN(GS,DS,S,T) 
+D_loss = (DT_loss + DS_loss) / 2
+\end{python}
+
+Next, we need to train the generators $G_t$ and $G_S$. In the full objective function, the two generator models appear both in adversarial loss and cycle consistency loss. To compute the adversarial loss in terms of generators, the results of the discriminators are first computed for the forward and backward translated images.
+
+\begin{python}
+# Patch: DT(GT(S)) and DS(GS(T)) 
+DT_fake = disc_T(gen_T(source))
+DS_fake = disc_S(gen_S(target))
+\end{python}
+
+Then we need to compute the adversarial loss with respect to generators.
+
+\begin{python}
+# minimize Et[(DT(t) - 1)^2] and Es[(DS(s) - 1)^2]
+loss_GT = mse(DT_fake, torch.ones_like(DT_fake))
+loss_GS = mse(DS_fake, torch.ones_like(DS_fake))
+\end{python}
+
+To compute the cycle consistency loss, which only concludes the generators, we first need to get the reprojection of the translated images.
+
+\begin{python}
+# GS(GT(S)) -> S'
+cycle_source = gen_S(gen_T(source))
+# GT(GS(T)) -> T'
+cycle_target = gen_T(gen_S(target))
+\end{python}
+
+And then calculate the cycle consistency loss according to the definition shown above. Finally, minimising the cycle consistency loss by using the defined optimizer to opitmize the generators model.
+
+\begin{python}
+# Lcyc(GS,GT) = Es[|GS(GT(s)) - s|] + Et[|GT(GS(t)) - t|]
+cycle_source_loss = l1(source, cycle_source)
+cycle_target_loss = l1(target, cycle_target)
+
+# add all togethor: L(GS,GT,DS,DT) = LGAN(GT,DT,X,Y) + LGAN(GS,DS,X,Y) + Lcyc(GS,GT)
+G_loss = loss_GT + loss_GS +  
+         lambda * (cycle_source_loss + cycle_target_loss) 
+\end{python}
 
 \subsection{Result Discussion}
 pro cons

@@ -6,8 +6,8 @@
 \contentsline {paragraph}{Cycle Consistency Loss.}{4}{section*.5}%
 \contentsline {subsection}{\numberline {2.3}Implementation}{4}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Dataset \& Pre-processing}{4}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Discriminator Model}{4}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Generator Model}{4}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Training}{4}{subsubsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.4}Result Discussion}{4}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Unsupervised Domain Adaptation via I2I Translation}{5}{section.3}%
+\contentsline {subsubsection}{\numberline {2.3.2}Discriminator Model}{5}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Generator Model}{5}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Training}{6}{subsubsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.4}Result Discussion}{8}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Unsupervised Domain Adaptation via I2I Translation}{9}{section.3}%
