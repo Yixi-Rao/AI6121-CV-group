@@ -38,7 +38,6 @@ def load_scheduler(checkpoint_file, scheduler):
     checkpoint = torch.load(checkpoint_file, map_location=config.DEVICE)
     scheduler.load_state_dict(checkpoint['scheduler'])
 
-
 def seed_everything(seed=42):
     os.environ["PYTHONHASHSEED"] = str(seed)
     random.seed(seed)

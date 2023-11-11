@@ -1,24 +1,23 @@
 """
-Training for CycleGAN
+    Training for CycleGAN
 
-Programmed by Aladdin Persson <aladdin.persson at hotmail dot com>
-* 2020-11-05: Initial coding
-* 2022-12-21: Small revision of code, checked that it works with latest PyTorch version
+    Programmed by Aladdin Persson <aladdin.persson at hotmail dot com>
+    * 2020-11-05: Initial coding
+    * 2022-12-21: Small revision of code, checked that it works with latest PyTorch version
 """
-# import sys
-import torch
-from dataset import CycleGAN_Dataset
 
-from utils import save_checkpoint, load_checkpoint, save_scheduler, load_scheduler
-from torch.utils.data import DataLoader
+import torch
 import torch.nn as nn
 import torch.optim as optim
-import config
 from tqdm import tqdm
 from torchvision.utils import save_image
+from torch.utils.data import DataLoader
+
+import config
+from utils import save_checkpoint, load_checkpoint, save_scheduler, load_scheduler
+from dataset import CycleGAN_Dataset
 from discriminator_model import Discriminator
 from generator_model import Generator
-
 
 def train_one_epoch(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, l1, mse, d_scaler, g_scaler):
     ''' GT: S -> T
@@ -107,18 +106,21 @@ def train_one_epoch(disc_T, disc_S, gen_S, gen_T, loader, opt_disc, opt_gen, l1,
         g_scaler.scale(G_loss).backward()
         g_scaler.step(opt_gen)
         g_scaler.update()
-
+            
         if idx % 100 == 0:
             # denormalize
-            save_image(fake_target * 0.5 + 0.5, f"saved_images/target_{idx}.png")
-            save_image(fake_source * 0.5 + 0.5, f"saved_images/source_{idx}.png")
+            for i in range(source.shape[0]):
+                save_image(fake_target[i] * 0.5 + 0.5, f"{config.IMAGE_SAVED_DIR}/trans_source_{idx}_{i}.png")
+                save_image(fake_source[i] * 0.5 + 0.5, f"{config.IMAGE_SAVED_DIR}/trans_target_{idx}_{i}.png")
+                save_image(target[i] * 0.5 + 0.5, f"{config.IMAGE_SAVED_DIR}/target_{idx}_{i}.png")
+                save_image(source[i] * 0.5 + 0.5, f"{config.IMAGE_SAVED_DIR}/source_{idx}_{i}.png")
 
         loop.set_postfix(H_real=T_reals / (idx + 1), H_fake=T_fakes / (idx + 1))
 
 def main():
     resume   = config.RESUME
     stage    = config.LOAD_MODEL_STAGE
-    max_e    = config.NUM_EPOCHS
+    max_e    = config.NUM_EPOCHS 
     resume_e = 0
     
     # dataset
@@ -126,14 +128,14 @@ def main():
         root_t=config.TRAIN_DIR + "/targets",
         root_s=config.TRAIN_DIR + "/sources",
         trans=config.transforms,
-        start=0,
-        end=2000
+        start=config.DATA_START,
+        end=config.DATA_END
     )
     
     loader = DataLoader(
         dataset,
         batch_size=config.BATCH_SIZE,
-        shuffle=True,
+        shuffle=False,
         num_workers=config.NUM_WORKERS,
         pin_memory=True,
     )
@@ -171,16 +173,16 @@ def main():
             load_checkpoint(config.CHECKPOINT_GEN_T, gen_T, opt_gen, config.LEARNING_RATE)
             load_checkpoint(config.CHECKPOINT_GEN_S, gen_S, opt_gen, config.LEARNING_RATE)
             load_checkpoint(config.CHECKPOINT_CRITIC_T, disc_T, opt_disc, config.LEARNING_RATE)
-            resume_e = load_checkpoint(config.CHECKPOINT_CRITIC_S, disc_S, opt_disc, config.LEARNING_RATE)
+            resume_e = load_checkpoint(config.CHECKPOINT_CRITIC_S, disc_S, opt_disc, config.LEARNING_RATE) % 100
         else:
             load_checkpoint(config.CHECKPOINT_GEN_T, gen_T, opt_gen, config.LEARNING_RATE)
             load_checkpoint(config.CHECKPOINT_GEN_S, gen_S, opt_gen, config.LEARNING_RATE)
             load_checkpoint(config.CHECKPOINT_CRITIC_T, disc_T, opt_disc, config.LEARNING_RATE)
-            resume_e = load_checkpoint(config.CHECKPOINT_CRITIC_S, disc_S, opt_disc, config.LEARNING_RATE)
+            resume_e = load_checkpoint(config.CHECKPOINT_CRITIC_S, disc_S, opt_disc, config.LEARNING_RATE) % 100
             
             load_scheduler(config.CHECKPOINT_schLR_D, sch_disc_decay)
             load_scheduler(config.CHECKPOINT_schLR_G, sch_gen_decay)
-    
+
     # float16 setup
     g_scaler = torch.cuda.amp.GradScaler()
     d_scaler = torch.cuda.amp.GradScaler()
