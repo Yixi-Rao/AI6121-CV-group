@@ -1,13 +1,30 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
 \contentsline {section}{\numberline {2}Image-to-Image Translation}{3}{section.2}%
+\contentsline {paragraph}{}{3}{section*.3}%
 \contentsline {subsection}{\numberline {2.1}Introduction}{3}{subsection.2.1}%
+\contentsline {paragraph}{}{3}{section*.4}%
 \contentsline {subsection}{\numberline {2.2}Model Architecture}{3}{subsection.2.2}%
-\contentsline {paragraph}{Adversarial Loss.}{4}{section*.4}%
-\contentsline {paragraph}{Cycle Consistency Loss.}{4}{section*.5}%
+\contentsline {paragraph}{}{3}{section*.6}%
+\contentsline {paragraph}{Adversarial Loss.}{4}{section*.7}%
+\contentsline {paragraph}{Cycle Consistency Loss.}{4}{section*.8}%
 \contentsline {subsection}{\numberline {2.3}Implementation}{4}{subsection.2.3}%
+\contentsline {paragraph}{}{4}{section*.9}%
 \contentsline {subsubsection}{\numberline {2.3.1}Dataset \& Pre-processing}{4}{subsubsection.2.3.1}%
+\contentsline {paragraph}{}{4}{section*.10}%
 \contentsline {subsubsection}{\numberline {2.3.2}Discriminator Model}{5}{subsubsection.2.3.2}%
+\contentsline {paragraph}{}{5}{section*.11}%
 \contentsline {subsubsection}{\numberline {2.3.3}Generator Model}{5}{subsubsection.2.3.3}%
+\contentsline {paragraph}{}{5}{section*.12}%
 \contentsline {subsubsection}{\numberline {2.3.4}Training}{6}{subsubsection.2.3.4}%
+\contentsline {paragraph}{}{6}{section*.13}%
 \contentsline {subsection}{\numberline {2.4}Result Discussion}{8}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Unsupervised Domain Adaptation via I2I Translation}{9}{section.3}%
+\contentsline {subsubsection}{\numberline {2.4.1}Result presentation}{8}{subsubsection.2.4.1}%
+\contentsline {paragraph}{}{8}{section*.14}%
+\contentsline {subsubsection}{\numberline {2.4.2}Major constraints of the CycleGAN}{8}{subsubsection.2.4.2}%
+\contentsline {paragraph}{Wrong recognization of objects.}{8}{section*.17}%
+\contentsline {paragraph}{Generation of artifact.}{10}{section*.19}%
+\contentsline {paragraph}{Generation of artifact.}{10}{section*.21}%
+\contentsline {paragraph}{Perform badly at night and dusk scenes.}{10}{section*.23}%
+\contentsline {paragraph}{The fuzzy images and Color distortion.}{11}{section*.24}%
+\contentsline {paragraph}{Intrinsic constraints of CycleGAN.}{11}{section*.25}%
+\contentsline {section}{\numberline {3}Unsupervised Domain Adaptation via I2I Translation}{12}{section.3}%

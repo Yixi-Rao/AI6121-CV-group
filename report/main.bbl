@@ -32,4 +32,7 @@ S.~R. Richter, V.~Vineet, S.~Roth, and V.~Koltun, ``Playing for data: Ground tru
 \bibitem{cordts2016cityscapes}
 M.~Cordts, M.~Omran, S.~Ramos, T.~Rehfeld, M.~Enzweiler, R.~Benenson, U.~Franke, S.~Roth, and B.~Schiele, ``The cityscapes dataset for semantic urban scene understanding,'' in \emph{Proceedings of the IEEE conference on computer vision and pattern recognition}, 2016, pp. 3213--3223.
 
+\bibitem{almahairi2018augmented}
+A.~Almahairi, S.~Rajeshwar, A.~Sordoni, P.~Bachman, and A.~Courville, ``Augmented cyclegan: Learning many-to-many mappings from unpaired data,'' in \emph{International conference on machine learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2018, pp. 195--204.
+
 \end{thebibliography}

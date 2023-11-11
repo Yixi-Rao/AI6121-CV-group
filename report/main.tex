@@ -10,15 +10,24 @@
 \usepackage{courier}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage[colorlinks=true, allcolors=red]{hyperref}
 \usepackage{float}
 \usepackage{setspace}
-\usepackage{subfigure}
+% \usepackage{subfigure}
 \usepackage{url}
 \usepackage{tabularx}
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx} %Times Font
 \usepackage{pythonhighlight}
+
+
+\usepackage[Export]{adjustbox}
+\usepackage{cellspace}
+
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{0pt}
+\renewcommand\tabularxcolumn[1]{>{\centering\arraybackslash}S{p{#1}}}
 
 \begin{document}
 %==== FRONT PART====
