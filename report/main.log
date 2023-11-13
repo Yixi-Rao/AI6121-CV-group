@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.25)  12 NOV 2023 00:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.25)  13 NOV 2023 18:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,7 +549,7 @@ Package hyperref Info: Link coloring ON on input line 32.
 \openout2 = `Title/titlepage.aux'.
 
  (./Title/titlepage.tex
-<Title/logo.png, id=56, 815.6874pt x 306.6657pt>
+<Title/logo.png, id=88, 815.6874pt x 306.6657pt>
 File: Title/logo.png Graphic file (type png)
 <use Title/logo.png>
 Package pdftex.def Info: Title/logo.png  used on input line 5.
@@ -601,7 +601,7 @@ l.41 \include{Section1/Section1}
 \openout2 = `Section2/Section2.aux'.
 
  (./Section2/Section2.tex
-<Section2/cycleGAN.png, id=90, 961.79324pt x 252.34274pt>
+<Section2/cycleGAN.png, id=130, 961.79324pt x 252.34274pt>
 File: Section2/cycleGAN.png Graphic file (type png)
 <use Section2/cycleGAN.png>
 Package pdftex.def Info: Section2/cycleGAN.png  used on input line 15.
@@ -885,11 +885,18 @@ Package pdftex.def Info: Section2/test/night/305_fake.png  used on input line 42
  [10 <./Section2/test/geometric/02410_real.png (PNG copy)> <./Section2/test/geometric/02851_real.png (PNG copy)> <./Section2/test/geometric/02377_real.png (PNG copy)> <./Section2/test/geometric/03450_real.png (PNG copy)> <./Section2/test/geometric/02410_fake.png (PNG copy)> <./Section2/test/geometric/02851_fake.png (PNG copy)> <./Section2/test/geometric/02377_fake.png (PNG copy)> <./Section2/test/geometric/03450_fake.png (PNG copy)> <./Section2/test/halo/239_real.png (PNG copy)> <./Section2/test/halo/100_real.png (PNG copy)> <./Section2/test/halo/53_real.png (PNG copy)> <./Section2/test/halo/236_real.png (PNG copy)> <./Section2/test/halo/239_fake.png (PNG copy)> <./Section2/test/halo/100_fake.png (PNG copy)> <./Section2/test/halo/53_fake.png (PNG copy)> <./Section2/test/halo/236_fake.png (PNG copy)>] [11 <./Section2/test/night/0_real.png (PNG copy)> <./Section2/test/night/0_fake.png (PNG copy)> <./Section2/test/night/301_real.png (PNG copy)> <./Section2/test/night/301_fake.png (PNG copy)> <./Section2/test/night/1_real.png (PNG copy)> <./Section2/test/night/1_fake.png (PNG copy)> <./Section2/test/night/302_real.png (PNG copy)> <./Section2/test/night/43_real.png (PNG copy)> <./Section2/test/night/43_fake.png (PNG copy)> <./Section2/test/night/305_real.png (PNG copy)> <./Section2/test/night/305_fake.png (PNG copy)>])
 \openout2 = `Section3/Section3.aux'.
 
- (./Section3/Section3.tex [12
+ (./Section3/Section3.tex
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 13.
+ [12
 
 
 
-]) (./main.bbl
+] [13]
+Overfull \hbox (8.23524pt too wide) in paragraph at lines 65--65
+\OT1/ptm/m/n/12 cat-e-gory is as-signed a weight based on its ap-pear-ance fre-quency and com-puter the weighted
+ []
+
+[14]) (./main.bbl
 Underfull \hbox (badness 2951) in paragraph at lines 27--28
 []\OT1/ptm/m/n/12 A. Pers-son, ``A clean, sim-ple and read-able im-ple-men-ta-tion of cy-cle-gan in py-
  []
@@ -899,7 +906,12 @@ Underfull \hbox (badness 2368) in paragraph at lines 27--28
 \OT1/ptm/m/n/12 torch,'' [][]$https : / / github . com / aladdinpersson / Machine-[]Learning-[]Collection / tree / master / ML /
  []
 
-) [13
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+[]\OT1/ptm/m/n/12 jfzhang95, ``pytorch-deeplab-xception,'' [][]$https : / / github . com / jfzhang95 /
+ []
+
+) [15
 
 
 ] (./main.aux (./Title/titlepage.aux) (./Section1/Section1.aux) (./Section2/Section2.aux) (./Section3/Section3.aux))
@@ -908,21 +920,21 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BA22ECA6CF0B5B16F44B829AE3B91889;2152.
+(rerunfilecheck)             Checksum: 58DEA1627961351262AA8F358E5FD5B3;3196.
  ) 
 Here is how much of TeX's memory you used:
- 16553 strings out of 474928
- 269180 string characters out of 5760544
+ 16710 strings out of 474928
+ 271351 string characters out of 5760544
  2198785 words of memory out of 5000000
- 37634 multiletter control sequences out of 15000+600000
- 592981 words of font info for 107 fonts, out of 8000000 for 9000
+ 37739 multiletter control sequences out of 15000+600000
+ 594773 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,119p,983b,1646s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (14 pages, 7694814 bytes).
+<s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (16 pages, 7709447 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 351 compressed objects within 4 object streams
- 167 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 457 compressed objects within 5 object streams
+ 216 named destinations out of 1000 (max. 500000)
+ 494 words of extra memory for PDF output out of 10000 (max. 10000000)
 
