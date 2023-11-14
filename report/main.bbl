@@ -35,10 +35,19 @@ M.~Cordts, M.~Omran, S.~Ramos, T.~Rehfeld, M.~Enzweiler, R.~Benenson, U.~Franke,
 \bibitem{almahairi2018augmented}
 A.~Almahairi, S.~Rajeshwar, A.~Sordoni, P.~Bachman, and A.~Courville, ``Augmented cyclegan: Learning many-to-many mappings from unpaired data,'' in \emph{International conference on machine learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2018, pp. 195--204.
 
-\bibitem{2017Rethinking}
-L.~C. Chen, G.~Papandreou, F.~Schroff, and H.~Adam, ``Rethinking atrous convolution for semantic image segmentation,'' 2017.
-
 \bibitem{Deeplab}
 jfzhang95, ``pytorch-deeplab-xception,'' \url{https://github.com/jfzhang95/pytorch-deeplab-xception/tree/master}, accessed: 2023-11-10.
+
+\bibitem{rethinking}
+Chen L C, Papandreou G, Schroff F, et al. Rethinking atrous convolution for semantic image segmentation[J]. arXiv preprint arXiv:1706.05587, 2017.
+
+\bibitem{spp}
+He K, Zhang X, Ren S, et al. Spatial pyramid pooling in deep convolutional networks for visual recognition[J]. IEEE transactions on pattern analysis and machine intelligence, 2015, 37(9): 1904-1916.
+
+\bibitem{dilatedcon}
+Yu F, Koltun V. Multi-scale context aggregation by dilated convolutions[J]. arXiv preprint arXiv:1511.07122, 2015.
+
+\bibitem{cycada}
+Hoffman J, Tzeng E, Park T, et al. Cycada: Cycle-consistent adversarial domain adaptation[C]//International conference on machine learning. Pmlr, 2018: 1989-1998.
 
 \end{thebibliography}

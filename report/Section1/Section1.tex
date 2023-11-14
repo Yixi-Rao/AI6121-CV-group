@@ -1,4 +1,10 @@
 \section{Introduction}
+This project aims to familiarise students with the recent image-to-image translation and unsupervised domain adaptation (UDA) techniques and equip them with hand-on coding experience with deep generative and discriminative networks. It consists of two tasks: 1) Image translation by using CycleGAN or more advanced image translation networks, aiming for a good understanding and practice of the image-to-image translation; 2) Input-space UDA via image translation, which aims to help students have a good understanding and practice of UDA via input-space alignment.
 
+\subsection{Image-to-Image (I2I) Translation}
+For the first task, you are expected to read the paper CycleGAN or other image translation work to have a good understanding of how it works. With that, you need to train an image translation network. You can leverage the open-source codes available on the Internet, and the source and target datasets can be GTA5 (or SYNTHIA) and Cityscapes for semantic segmentation, ICDAR2013 and ICDAR2015 for scene text detection, or other source-target datasets. In the project report, you need to describe your implementation in detail. You are also expected to discuss the major constraints of the image translation network according to your trained model and translated images.
+
+\subsection{Unsupervised Domain Adaptation via I2I Translation}
+For the second task, you are expected to learn and practise UDA via input-space alignment ([5] gives an example). With the image translation model from the first task, you can compare two semantic segmentation models: 1) A Source-only model that is trained with the labelled source data and evaluated over the target data; 2) A domain adaptive semantic segmentation model that is trained with the translated source data and evaluated over the target data. In the project report, you are expected to compare how the two models perform differently and why. You may also explore other translation networks for better UDA performance.
 
 \newpage

@@ -12,51 +12,54 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Ref/References.bib
+Warning--I didn't find a database entry for "cycada"
+Warning--I didn't find a database entry for "rethinking"
+Warning--I didn't find a database entry for "dilatedcon"
+Warning--I didn't find a database entry for "spp"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty journal in 2017Rethinking
 
 Done.
-You've used 7 entries,
+You've used 6 entries,
             4087 wiz_defined-function locations,
-            862 strings with 8862 characters,
-and the built_in function-call counts, 4935 in all, are:
-= -- 348
-> -- 145
+            862 strings with 8723 characters,
+and the built_in function-call counts, 4510 in all, are:
+= -- 320
+> -- 128
 < -- 31
-+ -- 78
-- -- 28
-* -- 231
-:= -- 701
-add.period$ -- 15
-call.type$ -- 7
-change.case$ -- 9
++ -- 70
+- -- 24
+* -- 211
+:= -- 632
+add.period$ -- 13
+call.type$ -- 6
+change.case$ -- 8
 chr.to.int$ -- 84
-cite$ -- 8
-duplicate$ -- 353
-empty$ -- 427
-format.name$ -- 33
-if$ -- 1140
+cite$ -- 6
+duplicate$ -- 316
+empty$ -- 390
+format.name$ -- 28
+if$ -- 1046
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 73
-newline$ -- 44
-num.names$ -- 7
-pop$ -- 205
+int.to.str$ -- 6
+missing$ -- 65
+newline$ -- 41
+num.names$ -- 6
+pop$ -- 180
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 367
+skip$ -- 337
 stack$ -- 0
-substring$ -- 207
-swap$ -- 262
+substring$ -- 206
+swap$ -- 242
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 7
-warning$ -- 1
-while$ -- 19
-width$ -- 8
-write$ -- 79
-(There was 1 warning)
+type$ -- 6
+warning$ -- 0
+while$ -- 18
+width$ -- 7
+write$ -- 72
+(There were 4 warnings)

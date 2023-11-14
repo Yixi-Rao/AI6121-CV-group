@@ -1,4 +1,6 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Image-to-Image (I2I) Translation}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Unsupervised Domain Adaptation via I2I Translation}{2}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Image-to-Image Translation}{3}{section.2}%
 \contentsline {paragraph}{}{3}{section*.3}%
 \contentsline {subsection}{\numberline {2.1}Introduction}{3}{subsection.2.1}%
@@ -28,20 +30,26 @@
 \contentsline {paragraph}{The fuzzy images and Color distortion.}{11}{section*.24}%
 \contentsline {paragraph}{Intrinsic constraints of CycleGAN.}{11}{section*.25}%
 \contentsline {section}{\numberline {3}Unsupervised Domain Adaptation via I2I Translation}{12}{section.3}%
-\contentsline {paragraph}{}{12}{section*.26}%
 \contentsline {subsection}{\numberline {3.1}Introduction}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Task Background}{12}{subsection.3.2}%
+\contentsline {paragraph}{}{12}{section*.26}%
+\contentsline {subsection}{\numberline {3.3}DeepLabV3}{12}{subsection.3.3}%
 \contentsline {paragraph}{}{12}{section*.27}%
-\contentsline {subsection}{\numberline {3.2}Implementation}{12}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.1}Atrous Convolution}{12}{subsubsection.3.3.1}%
 \contentsline {paragraph}{}{12}{section*.28}%
-\contentsline {subsubsection}{\numberline {3.2.1}Dataset \& Pre-processing}{12}{subsubsection.3.2.1}%
-\contentsline {paragraph}{}{12}{section*.29}%
-\contentsline {subsubsection}{\numberline {3.2.2}Model}{13}{subsubsection.3.2.2}%
-\contentsline {paragraph}{}{13}{section*.30}%
-\contentsline {subsubsection}{\numberline {3.2.3}Evaluation metrics}{13}{subsubsection.3.2.3}%
-\contentsline {paragraph}{}{13}{section*.31}%
-\contentsline {subsubsection}{\numberline {3.2.4}Testing}{14}{subsubsection.3.2.4}%
-\contentsline {paragraph}{}{14}{section*.32}%
-\contentsline {subsection}{\numberline {3.3}Training}{14}{subsection.3.3}%
-\contentsline {paragraph}{}{14}{section*.33}%
-\contentsline {subsection}{\numberline {3.4}Result discussion}{14}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.2}Atrous Spatial Pyramid Pooling}{12}{subsubsection.3.3.2}%
+\contentsline {paragraph}{}{12}{section*.30}%
+\contentsline {subsection}{\numberline {3.4}Implementation}{13}{subsection.3.4}%
+\contentsline {paragraph}{}{13}{section*.32}%
+\contentsline {subsubsection}{\numberline {3.4.1}Dataset \& Pre-processing}{13}{subsubsection.3.4.1}%
+\contentsline {paragraph}{}{13}{section*.33}%
+\contentsline {subsubsection}{\numberline {3.4.2}Model}{14}{subsubsection.3.4.2}%
 \contentsline {paragraph}{}{14}{section*.34}%
+\contentsline {subsubsection}{\numberline {3.4.3}Evaluation metrics}{15}{subsubsection.3.4.3}%
+\contentsline {paragraph}{}{15}{section*.35}%
+\contentsline {subsubsection}{\numberline {3.4.4}Testing}{15}{subsubsection.3.4.4}%
+\contentsline {paragraph}{}{15}{section*.36}%
+\contentsline {subsection}{\numberline {3.5}Training}{15}{subsection.3.5}%
+\contentsline {paragraph}{}{15}{section*.37}%
+\contentsline {subsection}{\numberline {3.6}Result discussion}{15}{subsection.3.6}%
+\contentsline {paragraph}{}{15}{section*.38}%
