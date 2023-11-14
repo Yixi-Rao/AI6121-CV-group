@@ -20,6 +20,9 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{cycada}
+J.~Hoffman, E.~Tzeng, T.~Park, J.-Y. Zhu, P.~Isola, K.~Saenko, A.~Efros, and T.~Darrell, ``Cycada: Cycle-consistent adversarial domain adaptation,'' in \emph{International conference on machine learning}.\hskip 1em plus 0.5em minus 0.4em\relax Pmlr, 2018, pp. 1989--1998.
+
 \bibitem{zhu2017unpaired}
 J.-Y. Zhu, T.~Park, P.~Isola, and A.~A. Efros, ``Unpaired image-to-image translation using cycle-consistent adversarial networks,'' in \emph{Proceedings of the IEEE international conference on computer vision}, 2017, pp. 2223--2232.
 
@@ -34,9 +37,6 @@ M.~Cordts, M.~Omran, S.~Ramos, T.~Rehfeld, M.~Enzweiler, R.~Benenson, U.~Franke,
 
 \bibitem{almahairi2018augmented}
 A.~Almahairi, S.~Rajeshwar, A.~Sordoni, P.~Bachman, and A.~Courville, ``Augmented cyclegan: Learning many-to-many mappings from unpaired data,'' in \emph{International conference on machine learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2018, pp. 195--204.
-
-\bibitem{cycada}
-J.~Hoffman, E.~Tzeng, T.~Park, J.-Y. Zhu, P.~Isola, K.~Saenko, A.~Efros, and T.~Darrell, ``Cycada: Cycle-consistent adversarial domain adaptation,'' in \emph{International conference on machine learning}.\hskip 1em plus 0.5em minus 0.4em\relax Pmlr, 2018, pp. 1989--1998.
 
 \bibitem{2017Rethinking}
 L.~C. Chen, G.~Papandreou, F.~Schroff, and H.~Adam, ``Rethinking atrous convolution for semantic image segmentation,'' 2017.
