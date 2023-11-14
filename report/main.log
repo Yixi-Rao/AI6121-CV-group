@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  14 NOV 2023 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  14 NOV 2023 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -461,7 +461,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count312
 \l__pdf_internal_box=\box61
-) (./main.aux)
+) (./main.aux (./Title/titlepage.aux) (./Section1/Section1.aux) (./Section2/Section2.aux) (./Section3/Section3.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -541,6 +541,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 32.
+ (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -548,7 +549,7 @@ Package hyperref Info: Link coloring ON on input line 32.
 \openout2 = `Title/titlepage.aux'.
 
  (./Title/titlepage.tex
-<Title/logo.png, id=4, 815.6874pt x 306.6657pt>
+<Title/logo.png, id=108, 815.6874pt x 306.6657pt>
 File: Title/logo.png Graphic file (type png)
 <use Title/logo.png>
 Package pdftex.def Info: Title/logo.png  used on input line 5.
@@ -556,8 +557,30 @@ Package pdftex.def Info: Title/logo.png  used on input line 5.
  [1
 
 
-{d:/TexLive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/TexLive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Title/logo.png>])
-No file main.toc.
+{d:/TexLive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/TexLive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Title/logo.png>]) (./main.toc
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 2.
+ (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 2.
+ (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 2.
+ (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 2.
+ (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -578,58 +601,16 @@ l.41 \include{Section1/Section1}
 \openout2 = `Section2/Section2.aux'.
 
  (./Section2/Section2.tex
-
-LaTeX Warning: Citation `zhu2017unpaired' on page 3 undefined on input line 3.
-
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 7.
-(d:/TexLive/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 7.
- (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 7.
- (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 7.
- (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-
-
-LaTeX Warning: Reference `figure:cyclegan' on page 3 undefined on input line 11.
-
-<Section2/cycleGAN.png, id=26, 961.79324pt x 252.34274pt>
+<Section2/cycleGAN.png, id=155, 961.79324pt x 252.34274pt>
 File: Section2/cycleGAN.png Graphic file (type png)
 <use Section2/cycleGAN.png>
 Package pdftex.def Info: Section2/cycleGAN.png  used on input line 15.
 (pdftex.def)             Requested size: 961.7909pt x 252.34212pt.
-[3
+ [3
 
 
 
- <./Section2/cycleGAN.png (PNG copy)>]
-
-LaTeX Warning: Citation `zhu2017unpaired' on page 4 undefined on input line 48.
-
-
-LaTeX Warning: Citation `CycleGANcode' on page 4 undefined on input line 48.
-
-
-LaTeX Warning: Citation `richter2016playing' on page 4 undefined on input line 52.
-
-
-LaTeX Warning: Citation `cordts2016cityscapes' on page 4 undefined on input line 52.
-
-(d:/TexLive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+ <./Section2/cycleGAN.png (PNG copy)>] (d:/TexLive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 54.
@@ -644,9 +625,6 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 14
 (d:/TexLive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [6] [7]
-
-LaTeX Warning: Reference `figure:cycgantest' on page 8 undefined on input line 242.
-
 File: Section2/train/02003_real.png Graphic file (type png)
 <use Section2/train/02003_real.png>
 Package pdftex.def Info: Section2/train/02003_real.png  used on input line 294.
@@ -759,9 +737,6 @@ File: Section2/train/05796_fake.png Graphic file (type png)
 <use Section2/train/05796_fake.png>
 Package pdftex.def Info: Section2/train/05796_fake.png  used on input line 294.
 (pdftex.def)             Requested size: 361.34912pt x 180.67455pt.
-
-LaTeX Warning: Reference `figure:cycganF' on page 8 undefined on input line 298.
-
 File: Section2/train/cityscape2GTA/101_real.png Graphic file (type png)
 <use Section2/train/cityscape2GTA/101_real.png>
 Package pdftex.def Info: Section2/train/cityscape2GTA/101_real.png  used on input line 321.
@@ -794,18 +769,6 @@ File: Section2/train/cityscape2GTA/trans_target_913.png Graphic file (type png)
 <use Section2/train/cityscape2GTA/trans_target_913.png>
 Package pdftex.def Info: Section2/train/cityscape2GTA/trans_target_913.png  used on input line 321.
 (pdftex.def)             Requested size: 361.34912pt x 180.67455pt.
-
-LaTeX Warning: Reference `figure:generate' on page 8 undefined on input line 326.
-
-
-LaTeX Warning: Reference `figure:generate' on page 8 undefined on input line 326.
-
-
-LaTeX Warning: Reference `figure:generate' on page 8 undefined on input line 326.
-
-
-LaTeX Warning: Citation `zhu2017unpaired' on page 8 undefined on input line 326.
-
 File: Section2/test/geometric/02410_real.png Graphic file (type png)
 <use Section2/test/geometric/02410_real.png>
 Package pdftex.def Info: Section2/test/geometric/02410_real.png  used on input line 353.
@@ -838,17 +801,7 @@ File: Section2/test/geometric/03450_fake.png Graphic file (type png)
 <use Section2/test/geometric/03450_fake.png>
 Package pdftex.def Info: Section2/test/geometric/03450_fake.png  used on input line 353.
 (pdftex.def)             Requested size: 361.34912pt x 180.67455pt.
-[8]
-
-LaTeX Warning: Reference `figure:halo' on page 9 undefined on input line 357.
-
-
-LaTeX Warning: Reference `figure:halo' on page 9 undefined on input line 357.
-
-
-LaTeX Warning: Reference `figure:halo' on page 9 undefined on input line 357.
-
-[9 <./Section2/train/02003_real.png (PNG copy)> <./Section2/train/02003_fake.png (PNG copy)> <./Section2/train/02788_real.png (PNG copy)> <./Section2/train/02788_fake.png (PNG copy)> <./Section2/train/02015_real.png (PNG copy)> <./Section2/train/02015_fake.png (PNG copy)> <./Section2/train/source_110.png (PNG copy)> <./Section2/train/trans_source_110.png (PNG copy)> <./Section2/train/02013_real.png (PNG copy)> <./Section2/train/02013_fake.png (PNG copy)> <./Section2/train/05990_real.png (PNG copy)> <./Section2/train/05990_fake.png (PNG copy)> <./Section2/train/05890_real.png (PNG copy)> <./Section2/train/05890_fake.png (PNG copy)> <./Section2/train/02382_real.png (PNG copy)> <./Section2/train/02382_fake.png (PNG copy)> <./Section2/train/source_130.png (PNG copy)> <./Section2/train/trans_source_130.png (PNG copy)> <./Section2/train/source_285.png (PNG copy)> <./Section2/train/trans_source_285.png (PNG copy)> <./Section2/train/05834_real.png (PNG copy)> <./Section2/train/05834_fake.png (PNG copy)> <./Section2/train/02050_real.png (PNG copy)> <./Section2/train/02050_fake.png (PNG copy)> <./Section2/train/05802_real.png (PNG copy)> <./Section2/train/05802_fake.png (PNG copy)> <./Section2/train/05796_real.png (PNG copy)> <./Section2/train/05796_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/101_real.png (PNG copy)> <./Section2/train/cityscape2GTA/107_real.png (PNG copy)> <./Section2/train/cityscape2GTA/108_real.png (PNG copy)> <./Section2/train/cityscape2GTA/target_913.png (PNG copy)> <./Section2/train/cityscape2GTA/101_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/107_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/108_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/trans_target_913.png (PNG copy)>]
+ [8] [9 <./Section2/train/02003_real.png (PNG copy)> <./Section2/train/02003_fake.png (PNG copy)> <./Section2/train/02788_real.png (PNG copy)> <./Section2/train/02788_fake.png (PNG copy)> <./Section2/train/02015_real.png (PNG copy)> <./Section2/train/02015_fake.png (PNG copy)> <./Section2/train/source_110.png (PNG copy)> <./Section2/train/trans_source_110.png (PNG copy)> <./Section2/train/02013_real.png (PNG copy)> <./Section2/train/02013_fake.png (PNG copy)> <./Section2/train/05990_real.png (PNG copy)> <./Section2/train/05990_fake.png (PNG copy)> <./Section2/train/05890_real.png (PNG copy)> <./Section2/train/05890_fake.png (PNG copy)> <./Section2/train/02382_real.png (PNG copy)> <./Section2/train/02382_fake.png (PNG copy)> <./Section2/train/source_130.png (PNG copy)> <./Section2/train/trans_source_130.png (PNG copy)> <./Section2/train/source_285.png (PNG copy)> <./Section2/train/trans_source_285.png (PNG copy)> <./Section2/train/05834_real.png (PNG copy)> <./Section2/train/05834_fake.png (PNG copy)> <./Section2/train/02050_real.png (PNG copy)> <./Section2/train/02050_fake.png (PNG copy)> <./Section2/train/05802_real.png (PNG copy)> <./Section2/train/05802_fake.png (PNG copy)> <./Section2/train/05796_real.png (PNG copy)> <./Section2/train/05796_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/101_real.png (PNG copy)> <./Section2/train/cityscape2GTA/107_real.png (PNG copy)> <./Section2/train/cityscape2GTA/108_real.png (PNG copy)> <./Section2/train/cityscape2GTA/target_913.png (PNG copy)> <./Section2/train/cityscape2GTA/101_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/107_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/108_fake.png (PNG copy)> <./Section2/train/cityscape2GTA/trans_target_913.png (PNG copy)>]
 File: Section2/test/halo/239_real.png Graphic file (type png)
 <use Section2/test/halo/239_real.png>
 Package pdftex.def Info: Section2/test/halo/239_real.png  used on input line 384.
@@ -881,10 +834,6 @@ File: Section2/test/halo/236_fake.png Graphic file (type png)
 <use Section2/test/halo/236_fake.png>
 Package pdftex.def Info: Section2/test/halo/236_fake.png  used on input line 384.
 (pdftex.def)             Requested size: 361.34912pt x 180.67455pt.
-
-
-LaTeX Warning: Reference `figure:unseen' on page 10 undefined on input line 388.
-
 File: Section2/test/night/0_real.png Graphic file (type png)
 <use Section2/test/night/0_real.png>
 Package pdftex.def Info: Section2/test/night/0_real.png  used on input line 420.
@@ -933,99 +882,28 @@ File: Section2/test/night/305_fake.png Graphic file (type png)
 <use Section2/test/night/305_fake.png>
 Package pdftex.def Info: Section2/test/night/305_fake.png  used on input line 420.
 (pdftex.def)             Requested size: 361.34912pt x 180.67455pt.
-
-LaTeX Warning: Reference `figure:unseen' on page 10 undefined on input line 424.
-
-[10 <./Section2/test/geometric/02410_real.png (PNG copy)> <./Section2/test/geometric/02851_real.png (PNG copy)> <./Section2/test/geometric/02377_real.png (PNG copy)> <./Section2/test/geometric/03450_real.png (PNG copy)> <./Section2/test/geometric/02410_fake.png (PNG copy)> <./Section2/test/geometric/02851_fake.png (PNG copy)> <./Section2/test/geometric/02377_fake.png (PNG copy)> <./Section2/test/geometric/03450_fake.png (PNG copy)> <./Section2/test/halo/239_real.png (PNG copy)> <./Section2/test/halo/100_real.png (PNG copy)> <./Section2/test/halo/53_real.png (PNG copy)> <./Section2/test/halo/236_real.png (PNG copy)> <./Section2/test/halo/239_fake.png (PNG copy)> <./Section2/test/halo/100_fake.png (PNG copy)> <./Section2/test/halo/53_fake.png (PNG copy)> <./Section2/test/halo/236_fake.png (PNG copy)>]
-
-LaTeX Warning: Reference `figure:generate' on page 11 undefined on input line 426.
-
-
-LaTeX Warning: Reference `figure:halo' on page 11 undefined on input line 426.
-
-
-LaTeX Warning: Reference `figure:unseen' on page 11 undefined on input line 426.
-
-
-LaTeX Warning: Citation `almahairi2018augmented' on page 11 undefined on input line 428.
-
-
-LaTeX Warning: Citation `almahairi2018augmented' on page 11 undefined on input line 428.
-
-[11 <./Section2/test/night/0_real.png (PNG copy)> <./Section2/test/night/0_fake.png (PNG copy)> <./Section2/test/night/301_real.png (PNG copy)> <./Section2/test/night/301_fake.png (PNG copy)> <./Section2/test/night/1_real.png (PNG copy)> <./Section2/test/night/1_fake.png (PNG copy)> <./Section2/test/night/302_real.png (PNG copy)> <./Section2/test/night/43_real.png (PNG copy)> <./Section2/test/night/43_fake.png (PNG copy)> <./Section2/test/night/305_real.png (PNG copy)> <./Section2/test/night/305_fake.png (PNG copy)>])
+ [10 <./Section2/test/geometric/02410_real.png (PNG copy)> <./Section2/test/geometric/02851_real.png (PNG copy)> <./Section2/test/geometric/02377_real.png (PNG copy)> <./Section2/test/geometric/03450_real.png (PNG copy)> <./Section2/test/geometric/02410_fake.png (PNG copy)> <./Section2/test/geometric/02851_fake.png (PNG copy)> <./Section2/test/geometric/02377_fake.png (PNG copy)> <./Section2/test/geometric/03450_fake.png (PNG copy)> <./Section2/test/halo/239_real.png (PNG copy)> <./Section2/test/halo/100_real.png (PNG copy)> <./Section2/test/halo/53_real.png (PNG copy)> <./Section2/test/halo/236_real.png (PNG copy)> <./Section2/test/halo/239_fake.png (PNG copy)> <./Section2/test/halo/100_fake.png (PNG copy)> <./Section2/test/halo/53_fake.png (PNG copy)> <./Section2/test/halo/236_fake.png (PNG copy)>] [11 <./Section2/test/night/0_real.png (PNG copy)> <./Section2/test/night/0_fake.png (PNG copy)> <./Section2/test/night/301_real.png (PNG copy)> <./Section2/test/night/301_fake.png (PNG copy)> <./Section2/test/night/1_real.png (PNG copy)> <./Section2/test/night/1_fake.png (PNG copy)> <./Section2/test/night/302_real.png (PNG copy)> <./Section2/test/night/43_real.png (PNG copy)> <./Section2/test/night/43_fake.png (PNG copy)> <./Section2/test/night/305_real.png (PNG copy)> <./Section2/test/night/305_fake.png (PNG copy)>])
 \openout2 = `Section3/Section3.aux'.
 
  (./Section3/Section3.tex
-
-LaTeX Warning: Citation `cycada' on page 12 undefined on input line 7.
-
-
-LaTeX Warning: Citation `2017Rethinking' on page 12 undefined on input line 13.
-
-./Section3/Section3.tex:15: Undefined control sequence.
-l.15 \subsubsubsection
-                      {Atrous Convolution}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `dilatedcon' on page 12 undefined on input line 17.
-
-<Section3/dilated convolution.jpg, id=281, 402.303pt x 149.358pt>
+<Section3/dilated convolution.jpg, id=428, 402.303pt x 149.358pt>
 File: Section3/dilated convolution.jpg Graphic file (type jpg)
 <use Section3/dilated convolution.jpg>
-Package pdftex.def Info: Section3/dilated convolution.jpg  used on input line 21.
+Package pdftex.def Info: Section3/dilated convolution.jpg  used on input line 20.
 (pdftex.def)             Requested size: 402.302pt x 149.35762pt.
-./Section3/Section3.tex:26: Undefined control sequence.
-l.26 \subsubsubsection
-                      {Atrous Spatial Pyramid Pooling}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `spp' on page 12 undefined on input line 28.
-
-
-LaTeX Warning: Reference `fig:aspp' on page 12 undefined on input line 28.
-
-[12
+ [12
 
 
 
 ]
-<Section3/aspp.jpg, id=295, 543.2295pt x 137.313pt>
+<Section3/aspp.jpg, id=445, 543.2295pt x 137.313pt>
 File: Section3/aspp.jpg Graphic file (type jpg)
 <use Section3/aspp.jpg>
-Package pdftex.def Info: Section3/aspp.jpg  used on input line 32.
+Package pdftex.def Info: Section3/aspp.jpg  used on input line 31.
 (pdftex.def)             Requested size: 543.22816pt x 137.31265pt.
-
-
-LaTeX Warning: Citation `Deeplab' on page 13 undefined on input line 39.
-
-
-LaTeX Warning: Citation `Deeplab' on page 13 undefined on input line 39.
-
-
-LaTeX Warning: Reference `alg:deeplab' on page 13 undefined on input line 39.
-
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 41.
-
-LaTeX Warning: Citation `richter2016playing' on page 13 undefined on input line 62.
-
-
-LaTeX Warning: Citation `cordts2016cityscapes' on page 13 undefined on input line 62.
-
-
-LaTeX Warning: Citation `Deeplab' on page 13 undefined on input line 64.
-
-[13 <./Section3/dilated convolution.jpg> <./Section3/aspp.jpg>] [14]
-Overfull \hbox (8.23524pt too wide) in paragraph at lines 93--93
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 40.
+ [13 <./Section3/dilated convolution.jpg> <./Section3/aspp.jpg>] [14]
+Overfull \hbox (8.23524pt too wide) in paragraph at lines 92--92
 \OT1/ptm/m/n/12 cat-e-gory is as-signed a weight based on its ap-pear-ance fre-quency and com-puter the weighted
  []
 
@@ -1047,35 +925,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8CC4D85A86A200B424B186CFC0A5772B;4008.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D2EBFDBD2EE07D41CA3DBE7918FF010C;4240.
  ) 
 Here is how much of TeX's memory you used:
- 16701 strings out of 474397
- 270065 string characters out of 5754185
+ 16749 strings out of 474397
+ 270888 string characters out of 5754185
  2204036 words of memory out of 5000000
- 38262 multiletter control sequences out of 15000+600000
+ 38295 multiletter control sequences out of 15000+600000
  594773 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,119p,1022b,1646s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,119p,1022b,2211s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (17 pages, 7812195 bytes).
+Output written on main.pdf (17 pages, 7817013 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
- 228 named destinations out of 1000 (max. 500000)
- 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 229 named destinations out of 1000 (max. 500000)
+ 544 words of extra memory for PDF output out of 10000 (max. 10000000)
 

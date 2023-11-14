@@ -1,6 +1,5 @@
 \section{Unsupervised Domain Adaptation via I2I Translation}
 \subsection{Introduction}
-\subsubsection{Task Background}
 \paragraph{}
 In the application of computer vision model, the ability of domain shift is seen as an important evaluation index. Because supervised models are usually trained under pairs of training image set and corresponding labels. However, there exists plenty of wild images with different distribution and patterns from training set. That's say these models may only perform well in limited domain. And if we want to obtain a model with enough versatility, we need to include enough images and label them for the training. That's a big cost. So researchers are trying to find a way to implement one model with limited data and adapt it to other domains.
 
@@ -8,11 +7,11 @@ The idea of Cycada\cite{cycada} is to apply unsupervised domain adaption(UDA) to
 
 In the first task we implement the unpaired stylish image translation between GTA5 set and Cityscape set. In the second task we utilize the translation results to train the semantic segmentation model, and compare its performance on target domain with the model trained on source image and label. 
 
-\subsubsection{DeepLabV3}
+\subsection{DeepLabV3}
 \paragraph{}
 The model we use for semantic segmentation is DeepLabV3\cite{2017Rethinking}. The author of DeepLabV3 wants to solve two chanllenges in application of DCNN to the field of semantic segmentation. The first one is the reduced feature resolution caused by consecutive pooling operations or convolution striding. This invariance to local image transformation may impede dense prediction tasks, where detailed spatial information is desired. Another is the poor performance in detecting multiple objects at different scales. To solve them, the paper proposes Atrous Spatial Pyramid Pooling(ASPP) in DeepLabV3.
 
-\subsubsubsection{Atrous Convolution}
+\subsubsection{Atrous Convolution}
 \paragraph{}
 Atrous convolution is a technique widely applied in semantic segmentation, also known as dilated convolution. It can help extract denser feature maps by removing the downsampling operations from the last few layers and upsampling the corresponding filter kernels, equivalent to inserting holes between filter weights. Atrous convoltion allows us to effectively enlarge the field of view of filters to incorporate multi-scale context\cite{dilatedcon} without expanding computation.
 
@@ -23,7 +22,7 @@ Atrous convolution is a technique widely applied in semantic segmentation, also 
     \label{fig:dilated}
 \end{figure}
 
-\subsubsubsection{Atrous Spatial Pyramid Pooling}
+\subsubsection{Atrous Spatial Pyramid Pooling}
 \paragraph{}
 Atrous Spatial Pyramid Pooling is Spatial Pyramid Pooling(SPP) combined with atrous convolution. SPP was first proposed to handle the issue that convolution network can only get fix-sized images\cite{spp}. It proved to be an effective way to resample features at different scales for accurately and efficiently classifying regions of an arbitrary scale. In DeepLabV3, author explore atrous convolution as a context module and tool for spatial pyramid pooling, and add batch normalize to the model. To solve the filter degeneration problem and incorporate global context information to the model, image-level features are adopted, as shown in Fig \ref{fig:aspp}.
 
