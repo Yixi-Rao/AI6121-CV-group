@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.25)  14 NOV 2023 17:23
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  14 NOV 2023 17:30
+>>>>>>> 86527929461f8f89c1c19cdf9095706a86143652
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,7 +553,7 @@ Package hyperref Info: Link coloring ON on input line 32.
 \openout2 = `Title/titlepage.aux'.
 
  (./Title/titlepage.tex
-<Title/logo.png, id=112, 815.6874pt x 306.6657pt>
+<Title/logo.png, id=108, 815.6874pt x 306.6657pt>
 File: Title/logo.png Graphic file (type png)
 <use Title/logo.png>
 Package pdftex.def Info: Title/logo.png  used on input line 5.
@@ -601,7 +605,7 @@ l.41 \include{Section1/Section1}
 \openout2 = `Section2/Section2.aux'.
 
  (./Section2/Section2.tex
-<Section2/cycleGAN.png, id=160, 961.79324pt x 252.34274pt>
+<Section2/cycleGAN.png, id=157, 961.79324pt x 252.34274pt>
 File: Section2/cycleGAN.png Graphic file (type png)
 <use Section2/cycleGAN.png>
 Package pdftex.def Info: Section2/cycleGAN.png  used on input line 15.
@@ -886,51 +890,34 @@ Package pdftex.def Info: Section2/test/night/305_fake.png  used on input line 42
 \openout2 = `Section3/Section3.aux'.
 
  (./Section3/Section3.tex
-
-LaTeX Warning: Citation `cycada' on page 12 undefined on input line 7.
-
-
-LaTeX Warning: Citation `rethinking' on page 12 undefined on input line 13.
-
-
-LaTeX Warning: Citation `dilatedcon' on page 12 undefined on input line 17.
-
 <Section3/dilated convolution.jpg, id=430, 402.303pt x 149.358pt>
 File: Section3/dilated convolution.jpg Graphic file (type jpg)
 <use Section3/dilated convolution.jpg>
-Package pdftex.def Info: Section3/dilated convolution.jpg  used on input line 21.
+Package pdftex.def Info: Section3/dilated convolution.jpg  used on input line 20.
 (pdftex.def)             Requested size: 402.302pt x 149.35762pt.
-
-LaTeX Warning: Citation `spp' on page 12 undefined on input line 28.
-
-[12
+ [12
 
 
 
 ]
-<Section3/aspp.jpg, id=442, 543.2295pt x 137.313pt>
+<Section3/aspp.jpg, id=446, 543.2295pt x 137.313pt>
 File: Section3/aspp.jpg Graphic file (type jpg)
 <use Section3/aspp.jpg>
-Package pdftex.def Info: Section3/aspp.jpg  used on input line 32.
+Package pdftex.def Info: Section3/aspp.jpg  used on input line 31.
 (pdftex.def)             Requested size: 543.22816pt x 137.31265pt.
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 41.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 40.
  [13 <./Section3/dilated convolution.jpg> <./Section3/aspp.jpg>] [14]
-Overfull \hbox (8.23524pt too wide) in paragraph at lines 93--93
+Overfull \hbox (8.23524pt too wide) in paragraph at lines 92--92
 \OT1/ptm/m/n/12 cat-e-gory is as-signed a weight based on its ap-pear-ance fre-quency and com-puter the weighted
  []
 
 [15]) (./main.bbl
-Underfull \hbox (badness 2951) in paragraph at lines 27--28
+Underfull \hbox (badness 2197) in paragraph at lines 30--31
 []\OT1/ptm/m/n/12 A. Pers-son, ``A clean, sim-ple and read-able im-ple-men-ta-tion of cy-cle-gan in py-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 27--28
-\OT1/ptm/m/n/12 torch,'' [][]$https : / / github . com / aladdinpersson / Machine-[]Learning-[]Collection / tree / master / ML /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 []\OT1/ptm/m/n/12 jfzhang95, ``pytorch-deeplab-xception,'' [][]$https : / / github . com / jfzhang95 /
  []
 
@@ -942,14 +929,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BF092BB4F07B2D167048E0206683DE9C;4376.
+(rerunfilecheck)             Checksum: D2EBFDBD2EE07D41CA3DBE7918FF010C;4240.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  16745 strings out of 474928
  272078 string characters out of 5760544
  2198785 words of memory out of 5000000
@@ -959,9 +943,20 @@ Here is how much of TeX's memory you used:
  75i,17n,119p,983b,2207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on main.pdf (17 pages, 7814987 bytes).
+=======
+ 16749 strings out of 474397
+ 270888 string characters out of 5754185
+ 2204036 words of memory out of 5000000
+ 38295 multiletter control sequences out of 15000+600000
+ 594773 words of font info for 112 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,17n,119p,1022b,2211s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (17 pages, 7816949 bytes).
+>>>>>>> 86527929461f8f89c1c19cdf9095706a86143652
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 226 named destinations out of 1000 (max. 500000)
- 552 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 622 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 229 named destinations out of 1000 (max. 500000)
+ 544 words of extra memory for PDF output out of 10000 (max. 10000000)
 

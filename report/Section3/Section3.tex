@@ -1,6 +1,5 @@
 \section{Unsupervised Domain Adaptation via I2I Translation}
 \subsection{Introduction}
-\subsection{Task Background}
 \paragraph{}
 In the application of computer vision model, the ability of domain shift is seen as an important evaluation index. Because supervised models are usually trained under pairs of training image set and corresponding labels. However, there exists plenty of wild images with different distribution and patterns from training set. That's say these models may only perform well in limited domain. And if we want to obtain a model with enough versatility, we need to include enough images and label them for the training. That's a big cost. So researchers are trying to find a way to implement one model with limited data and adapt it to other domains.
 
@@ -10,7 +9,7 @@ In the first task we implement the unpaired stylish image translation between GT
 
 \subsection{DeepLabV3}
 \paragraph{}
-The model we use for semantic segmentation is DeepLabV3\cite{rethinking}. The author of DeepLabV3 wants to solve two chanllenges in application of DCNN to the field of semantic segmentation. The first one is the reduced feature resolution caused by consecutive pooling operations or convolution striding. This invariance to local image transformation may impede dense prediction tasks, where detailed spatial information is desired. Another is the poor performance in detecting multiple objects at different scales. To solve them, the paper proposes Atrous Spatial Pyramid Pooling(ASPP) in DeepLabV3.
+The model we use for semantic segmentation is DeepLabV3\cite{2017Rethinking}. The author of DeepLabV3 wants to solve two chanllenges in application of DCNN to the field of semantic segmentation. The first one is the reduced feature resolution caused by consecutive pooling operations or convolution striding. This invariance to local image transformation may impede dense prediction tasks, where detailed spatial information is desired. Another is the poor performance in detecting multiple objects at different scales. To solve them, the paper proposes Atrous Spatial Pyramid Pooling(ASPP) in DeepLabV3.
 
 \subsubsection{Atrous Convolution}
 \paragraph{}
