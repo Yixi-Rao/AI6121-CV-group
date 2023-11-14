@@ -25,30 +25,29 @@
 \contentsline {subsubsection}{\numberline {2.4.2}Major constraints of the CycleGAN}{8}{subsubsection.2.4.2}%
 \contentsline {paragraph}{Wrong recognization of objects.}{8}{section*.17}%
 \contentsline {paragraph}{Generation of artifact.}{10}{section*.19}%
-\contentsline {paragraph}{Generation of artifact.}{10}{section*.21}%
-\contentsline {paragraph}{Perform badly at night and dusk scenes.}{10}{section*.23}%
-\contentsline {paragraph}{The fuzzy images and Color distortion.}{11}{section*.24}%
-\contentsline {paragraph}{Intrinsic constraints of CycleGAN.}{11}{section*.25}%
+\contentsline {paragraph}{Perform badly at night and dusk scenes.}{10}{section*.21}%
+\contentsline {paragraph}{The fuzzy images and Color distortion.}{10}{section*.23}%
+\contentsline {paragraph}{Intrinsic constraints of CycleGAN.}{11}{section*.24}%
 \contentsline {section}{\numberline {3}Unsupervised Domain Adaptation via I2I Translation}{12}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Introduction}{12}{subsection.3.1}%
-\contentsline {paragraph}{}{12}{section*.26}%
+\contentsline {paragraph}{}{12}{section*.25}%
 \contentsline {subsection}{\numberline {3.2}DeepLabV3}{12}{subsection.3.2}%
-\contentsline {paragraph}{}{12}{section*.27}%
+\contentsline {paragraph}{}{12}{section*.26}%
 \contentsline {subsubsection}{\numberline {3.2.1}Atrous Convolution}{12}{subsubsection.3.2.1}%
-\contentsline {paragraph}{}{12}{section*.28}%
+\contentsline {paragraph}{}{12}{section*.27}%
 \contentsline {subsubsection}{\numberline {3.2.2}Atrous Spatial Pyramid Pooling}{12}{subsubsection.3.2.2}%
-\contentsline {paragraph}{}{12}{section*.30}%
+\contentsline {paragraph}{}{12}{section*.29}%
 \contentsline {subsection}{\numberline {3.3}Implementation}{13}{subsection.3.3}%
-\contentsline {paragraph}{}{13}{section*.32}%
+\contentsline {paragraph}{}{13}{section*.31}%
 \contentsline {subsubsection}{\numberline {3.3.1}Dataset \& Pre-processing}{13}{subsubsection.3.3.1}%
-\contentsline {paragraph}{}{13}{section*.33}%
+\contentsline {paragraph}{}{13}{section*.32}%
 \contentsline {subsubsection}{\numberline {3.3.2}Model}{14}{subsubsection.3.3.2}%
-\contentsline {paragraph}{}{14}{section*.34}%
+\contentsline {paragraph}{}{14}{section*.33}%
 \contentsline {subsubsection}{\numberline {3.3.3}Evaluation metrics}{15}{subsubsection.3.3.3}%
-\contentsline {paragraph}{}{15}{section*.35}%
+\contentsline {paragraph}{}{15}{section*.34}%
 \contentsline {subsubsection}{\numberline {3.3.4}Testing}{15}{subsubsection.3.3.4}%
-\contentsline {paragraph}{}{15}{section*.36}%
+\contentsline {paragraph}{}{15}{section*.35}%
 \contentsline {subsection}{\numberline {3.4}Training}{15}{subsection.3.4}%
-\contentsline {paragraph}{}{15}{section*.37}%
+\contentsline {paragraph}{}{15}{section*.36}%
 \contentsline {subsection}{\numberline {3.5}Result discussion}{15}{subsection.3.5}%
-\contentsline {paragraph}{}{15}{section*.38}%
+\contentsline {paragraph}{}{15}{section*.37}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.25)  14 NOV 2023 17:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.25)  14 NOV 2023 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -886,7 +886,7 @@ Package pdftex.def Info: Section2/test/night/305_fake.png  used on input line 42
 \openout2 = `Section3/Section3.aux'.
 
  (./Section3/Section3.tex
-<Section3/dilated convolution.jpg, id=430, 402.303pt x 149.358pt>
+<Section3/dilated convolution.jpg, id=428, 402.303pt x 149.358pt>
 File: Section3/dilated convolution.jpg Graphic file (type jpg)
 <use Section3/dilated convolution.jpg>
 Package pdftex.def Info: Section3/dilated convolution.jpg  used on input line 20.
@@ -896,7 +896,7 @@ Package pdftex.def Info: Section3/dilated convolution.jpg  used on input line 20
 
 
 ]
-<Section3/aspp.jpg, id=446, 543.2295pt x 137.313pt>
+<Section3/aspp.jpg, id=444, 543.2295pt x 137.313pt>
 File: Section3/aspp.jpg Graphic file (type jpg)
 <use Section3/aspp.jpg>
 Package pdftex.def Info: Section3/aspp.jpg  used on input line 31.
@@ -929,18 +929,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D2EBFDBD2EE07D41CA3DBE7918FF010C;4240.
  ) 
 Here is how much of TeX's memory you used:
- 16747 strings out of 474928
- 272105 string characters out of 5760544
+ 16746 strings out of 474928
+ 272094 string characters out of 5760544
  2198785 words of memory out of 5000000
  37763 multiletter control sequences out of 15000+600000
  594773 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,119p,983b,2207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><s:/LaTeX/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (17 pages, 7816949 bytes).
+Output written on main.pdf (17 pages, 7816367 bytes).
 PDF statistics:
- 622 PDF objects out of 1000 (max. 8388607)
- 503 compressed objects within 6 object streams
- 229 named destinations out of 1000 (max. 500000)
+ 618 PDF objects out of 1000 (max. 8388607)
+ 500 compressed objects within 5 object streams
+ 228 named destinations out of 1000 (max. 500000)
  544 words of extra memory for PDF output out of 10000 (max. 10000000)
 

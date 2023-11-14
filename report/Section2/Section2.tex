@@ -385,7 +385,7 @@ Figure~\ref{figure:cycganF} shows CycleGAN's byproduct generator $F$, which conv
     \caption{Failure cases of the CycleGAN:\@ Wrong generation of artifact.}\label{figure:halo}
 \end{figure}
 
-\paragraph{Generation of artifact.} In Figure~\ref{figure:unseen}, we observe that CycleGAN performs poorly in night and dusk scenes. In the night scene, it translates the dark sky into the hue that does not exist in real-world cityscapes. In the dusk scene, it translates the orange sky into a sunny sky, failing to accurately capture the temporal information of the original image. The reason for this phenomenon may be the fact that the training set does not contain such images, or there are a few pairs of such training images compared to daytime images. The generalizability of CycleGAN is also very weak compared to other models using the aligned paired training method.
+\paragraph{Perform badly at night and dusk scenes.} In Figure~\ref{figure:unseen}, we observe that CycleGAN performs poorly in night and dusk scenes. In the night scene, it translates the dark sky into the hue that does not exist in real-world cityscapes. In the dusk scene, it translates the orange sky into a sunny sky, failing to accurately capture the temporal information of the original image. The reason for this phenomenon may be the fact that the training set does not contain such images, or there are a few pairs of such training images compared to daytime images. The generalizability of CycleGAN is also very weak compared to other models using the aligned paired training method.
 
 \begin{figure}[!htb]
     \setlength\tabcolsep{6pt}
@@ -420,8 +420,6 @@ Figure~\ref{figure:cycganF} shows CycleGAN's byproduct generator $F$, which conv
     \end{tabularx}
     \caption{Failure cases of the CycleGAN:\@ Performs poorly in night and dusk scenes.}\label{figure:unseen}
 \end{figure}
-
-\paragraph{Perform badly at night and dusk scenes.} In Figure~\ref{figure:unseen}, we observe that CycleGAN performs poorly in night and dusk scenes. In the night scene, it translates the dark sky into the hue that does not exist in real-world cityscapes. In the dusk scene, it translates the orange sky into a sunny sky, failing to accurately capture the temporal information of the original image. The reason for this phenomenon may be the fact that the training set does not contain such images, or there are a few pairs of such training images compared to daytime images. The generalizability of CycleGAN is also very weak compared to other models using the aligned paired training method.
 
 \paragraph{The fuzzy images and Color distortion.} In the above Figures~\ref{figure:generate},~\ref{figure:halo}, and~\ref{figure:unseen}, we can see that the images generated on the test set have less clarity compared to the source images and there will be some color distortion. The reason for this phenomenon is that we used too few images in the training set or too few epochs. Thus we can conclude that although CycleGAN can learn mappings without paired images, it still needs a lot of data to achieve good results in some cases, especially when the target area changes greatly.
 
