@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  14 NOV 2023 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.1)  14 NOV 2023 17:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -886,29 +886,17 @@ Package pdftex.def Info: Section2/test/night/305_fake.png  used on input line 42
 \openout2 = `Section3/Section3.aux'.
 
  (./Section3/Section3.tex
-
-LaTeX Warning: Citation `cycada' on page 12 undefined on input line 7.
-
-
-LaTeX Warning: Citation `rethinking' on page 12 undefined on input line 13.
-
-
-LaTeX Warning: Citation `dilatedcon' on page 12 undefined on input line 17.
-
-<Section3/dilated convolution.jpg, id=430, 402.303pt x 149.358pt>
+<Section3/dilated convolution.jpg, id=433, 402.303pt x 149.358pt>
 File: Section3/dilated convolution.jpg Graphic file (type jpg)
 <use Section3/dilated convolution.jpg>
 Package pdftex.def Info: Section3/dilated convolution.jpg  used on input line 21.
 (pdftex.def)             Requested size: 402.302pt x 149.35762pt.
-
-LaTeX Warning: Citation `spp' on page 12 undefined on input line 28.
-
-[12
+ [12
 
 
 
 ]
-<Section3/aspp.jpg, id=442, 543.2295pt x 137.313pt>
+<Section3/aspp.jpg, id=449, 543.2295pt x 137.313pt>
 File: Section3/aspp.jpg Graphic file (type jpg)
 <use Section3/aspp.jpg>
 Package pdftex.def Info: Section3/aspp.jpg  used on input line 32.
@@ -920,17 +908,12 @@ Overfull \hbox (8.23524pt too wide) in paragraph at lines 93--93
  []
 
 [15]) (./main.bbl
-Underfull \hbox (badness 2951) in paragraph at lines 27--28
+Underfull \hbox (badness 2197) in paragraph at lines 27--28
 []\OT1/ptm/m/n/12 A. Pers-son, ``A clean, sim-ple and read-able im-ple-men-ta-tion of cy-cle-gan in py-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 27--28
-\OT1/ptm/m/n/12 torch,'' [][]$https : / / github . com / aladdinpersson / Machine-[]Learning-[]Collection / tree / master / ML /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 []\OT1/ptm/m/n/12 jfzhang95, ``pytorch-deeplab-xception,'' [][]$https : / / github . com / jfzhang95 /
  []
 
@@ -942,26 +925,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BF092BB4F07B2D167048E0206683DE9C;4376.
  ) 
 Here is how much of TeX's memory you used:
- 16747 strings out of 474397
- 270861 string characters out of 5754185
+ 16751 strings out of 474397
+ 270918 string characters out of 5754185
  2204036 words of memory out of 5000000
  38296 multiletter control sequences out of 15000+600000
  594773 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,119p,1022b,2211s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/TexLive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (17 pages, 7814987 bytes).
+Output written on main.pdf (17 pages, 7817348 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 226 named destinations out of 1000 (max. 500000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 230 named destinations out of 1000 (max. 500000)
  552 words of extra memory for PDF output out of 10000 (max. 10000000)
 
