@@ -35,7 +35,7 @@ Atrous Spatial Pyramid Pooling is Spatial Pyramid Pooling(SPP) combined with atr
 
 \subsection{Implementation}
 \paragraph{}
-Our implementation of DeepLab V3 is largely based on~\cite{Deeplab}, and we make some adaptations in order to train the model on our dataset. As code for testing is not included in~\cite{Deeplab}, we also implement a script for model testing. The pseudo code for the overall procedure of training, validation and testing is shown in Algorithm~\ref{alg:deeplab}, and the details will be discussed in following sections.
+Our implementation of DeepLab V3 is largely based on~\cite{Deeplab}, and we make some adaptations in order to train the model on our data set. As code for testing is not included in~\cite{Deeplab}, we also implement a script for model testing. The pseudo code for the overall procedure of training, validation and testing is shown in Algorithm~\ref{alg:deeplab}, and the details will be discussed in following sections.
 \begin{algorithm}[!ht]
     \caption{Overall procedure for Semantic Segmentation}\label{alg:deeplab}
     \textbf{Objective}: Train a semantic segmentation model and evaluate performance\\
@@ -58,14 +58,13 @@ Our implementation of DeepLab V3 is largely based on~\cite{Deeplab}, and we make
 \end{algorithm}
 \subsubsection{Dataset \& Pre-processing}
 \paragraph{}
-The source-only model use original GTA5 dataset from~\cite{richter2016playing} for training and validation, and use cityscape dataset from~\cite{cordts2016cityscapes} for testing. On the other hand, the domain adaptive semantic segmentation model is trained on translated cityscape-style GTA5 images obtained from the first task, and also evaluated on cityscape dataset.
+The source-only model use original GTA5 data set from~\cite{richter2016playing} for training and validation, and use cityscape data set from~\cite{cordts2016cityscapes} for testing. On the other hand, the domain adaptive semantic segmentation model is trained on translated cityscape-style GTA5 images obtained from the first task, and also evaluated on cityscape data set.
 
-As GTA5 and cityscape dataset share the same label domain, we follow the pre-processing procedure for cityscape in~\cite{Deeplab}. We define three dataloaders to load datasets: train\_loader, val\_loader and test\_loader. For training images and labels, we perform random flip, crop and gaussian blur, and normalize with given parameters. For validation and testing sets, we adjust the size of images and labels and perform normalization with the same parameters. The pre-processing of input images can better augment its feature.
+As GTA5 and cityscape data set share the same label space, we follow the pre-processing procedure for cityscape in~\cite{Deeplab}. We define three dataloaders to load data sets: train\_loader, val\_loader and test\_loader. For training images and labels, we perform random flip, crop and gaussian blur, and normalize with given parameters. For validation and testing sets, we adjust the size of images and labels and perform normalization with the same parameters. The pre-processing of input images can better augment its feature.
 \subsubsection{Model}
 \paragraph{}
 The DeepLab model consists of three main parts: a pre-trained backbone network, the Atrous Spatial Pyramid Pooling (ASPP) module, and a decoder. The input sample is first put into the backbone network for feature extraction to obtain a feature map and a low-level feature map from the first layer of the backbone network. The ASPP module uses atrous convolution method to perform convolution on the feature map to obtain different context information. Afterwards, the decoder combines the processed feature map and the low-level feature map in order to achieve better semantic segmentation accuracy. Finally, bilinear interpolation is performed on the feature map to make it the same size of the input image. We compute the cross entropy loss between model output and labels, and optimize with stochastic gradient decent method.
-
-The backbone network we use is . and the main part of the definition of the  DeepLab model is shown below. The parameter num\_classes defines the dimension of model output, and can be adjusted according to target label spaces. In both GTA5 and cityscapes dataset, the number of classes is 19.
+For backbone networks, we choose pre-trained ResNet101. According to~\cite{2016Deep}, with the idea of residual blocks, ResNet can build more network layers without performance loss, thus extracting more information from images. The main part of the definition of the  DeepLab model is shown below. The parameter num\_classes defines the dimension of model output, and can be adjusted according to target label spaces. In both GTA5 and cityscapes data set, the number of classes is 19.
 \begin{python}
 class DeepLab(nn.Module):
     def __init__(self, backbone, output_stride=16, num_classes):
@@ -91,11 +90,91 @@ As for model evaluation, we adopt four widely-used evaluation metrics in semanti
     \item Mean Intersection over Union (MIoU): a standard metric for semantic segmentation. Compute the intersection over union(IoU) of ground truth and predicted result for each category and take average. \[MIoU = \frac{1}{k+1}\sum_{i=0}^k\frac{{p_{ii}}}{\sum_{j=0}^k{p_{ij}}+\sum_{j=0}^k{p_{ji}}-p_{ii}}\]
     \item Frequency Weighted Intersection over Union (FWIoU): a revised version of MIoU. Each category is assigned a weight based on its appearance frequency and computer the weighted average of IoU. \[FWMIoU = \frac{1}{\sum_{i=0}^k\sum_{j=0}^k{p_{ij}}}\sum_{i=0}^k\frac{{p_{ii}}}{\sum_{j=0}^k{p_{ij}}+\sum_{j=0}^k{p_{ji}}-p_{ii}}\]
 \end{itemize}
-MIoU is the most popular evaluation metrics in semantic segmentation, but in some datasets, the distribution of target categories may be imbalanced, so we may need to consider FWIoU at the same time.
+MIoU is the most popular evaluation metrics in semantic segmentation, but in some data sets, the distribution of target categories may be imbalanced, so we may need to consider FWIoU at the same time. In every evaluation step, we generate the confusion matrix of target and prediction, and use it to compute the four metrics above.
 \subsubsection{Testing}
 \paragraph{}
-\subsection{Training}
+After training and validation, we have obtained the best model. In testing, we load the saved model parameters and evaluate on testing set with aforementioned evaluation metrics to obtain quantitative results. We also visualize output images for qualitative analysis and comparison.
+\subsection{Settings}
 \paragraph{}
+In the training and validation, we define our own data set. The parameter settings mainly follows the suggested setting in~\cite{Deeplab}, and we make some changes according to our data set and time and GPU limitations. The details are as follows:
+\begin{itemize}
+    \item To train the source-only model, we use 2000 images from GTA5 data set, 1700 for training and 300 for validation. For the domain adaptive model, the training and validation set are translated version of the 2000 GTA5 images, obtained from the CycleGAN from Task 1. Both testing set are 316 original images from cityscape data set.
+    \item We compute the cross entropy loss between model output and labels, and use stochastic gradient descent optimizer.
+    \item The suggested training epoch for cityscape-style data sets is 200, but it is hard to implement due to our time and GPU limitations. In some tentative training, we find that on our relatively small data set, the model converges quickly. The train and test loss remain stable after around 10 epochs for the source-only model, so we set training epoch at 15. However, it takes several more epochs for the domain adaptive model to converge, so we set training epoch at 20. 
+    \item After each epoch we perform a quick validation, and save checkpoints if the model outperforms previous best in MIoU.
+    \item The learning rate is initially set to 0.01, and decay with poly learning rate strategy, and the power of decay is set to 0.9.
+    \item The random crop size for training images is set to 513, which means training images are cropped into 513$\times$513 patches.
+\end{itemize}
 \subsection{Result discussion}
 \paragraph{}
+Here we present some testing results to compare the source-only model and the domain adaptive model with aforementioned semantic segmentation metrics.
+
+As is shown in Table~\ref{tab:table1}, there is a significant performance drop on validation and testing set. This is due to the domain difference between the training, validation and testing data set. In our experiment setting, training set and validation set are from the same data set, thus they share the same domain and similar features. The categories that appear in training set take on similar feature distribution in validation set, so the model can make a correct detection and segmentation. However, the testing set is from another data set, and is from a greatly different domain. Take GTA5 and cityscape data set as an example. The two data sets share the same label space, and they are both images of city scenes. However GTA5 data set is synthetic images taken from videogames, while cityscape images are taken from the real world. Differences including illumination changes, viewpoint changes and so on can greatly change the feature distribution of images. A category in GTA5 may look greatly different from the same category in cityscape. As a result, the information the model learned from GTA5 transfer poorly to cityscape data set, leading to a significant performance loss.    
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+    \hline      &  \textbf{PA} & \textbf{MPA} & \textbf{MIoU} & \textbf{FWMIoU} \\
+    \hline     val & 0.913 & 0.533 & 0.462 & 0.850\\
+    \hline     test & 0.226 & 0.078 & 0.015 & 0.224\\
+    \hline
+    \end{tabular}
+    \caption{Comparison of validation and testing results}
+    \label{tab:table1}
+\end{table}
+
+As is shown in Table~\ref{tab:table2}, domain adaptive model outperforms source-only model and achieves higher scores in all four evaluation metrics. Based on the analysis above, the domain difference between the training data set and the testing data set greatly contributes to the performance drop. But with the I2I translation model trained from the first task, we have learned a mapping function that can convert GTA5 images into a cityscape style. After the translation, the image looks more 'cityscape', and the source domain is closer to the target domain. The image features are more consistent between the source domain and target domain, so the semantic segmentation model can better transfer what it has learned from the training set to the testing set. As a result, domain adaptive model achieves better performance than the source-only model.
+
+Figure~\ref{figure:visualization} shows some examples of test output for comparison. The domain adaptive model produces a better result than the source-only model. We have noticed that the domain adaptive model especially does better in segmenting 'road' and 'sidewalk'. In GTA5 images, the roads appears more coarse with many holes, while in cityscape images, the roads look more smooth and plain. This performance improvement on certain categories further proves the effectiveness of domain adaptation.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+    \hline      &  \textbf{PA} & \textbf{MPA} & \textbf{MIoU} & \textbf{FWMIoU} \\
+    \hline     source-only & 0.226 & 0.078 & 0.015 & 0.224\\
+    \hline     domain adaptive & 0.272 & 0.084 & 0.018 & 0.270\\
+    \hline
+    \end{tabular}
+    \caption{Results on test set with ResNet101 backbone.}
+    \label{tab:table2}
+\end{table}
+
+\begin{figure}[!htb]
+    \setlength\tabcolsep{6pt}
+    \adjustboxset{width=\linewidth, valign=c}
+    \centering
+    \begin{tabularx}{1.0\linewidth}{@{}
+        l @{\hspace{4pt}}
+        X @{\hspace{4pt}} 
+        X @{\hspace{6pt}}
+        X @{\hspace{4pt}}
+        X @{\hspace{4pt}}
+      @{}}
+      & \multicolumn{1}{c}{\footnotesize \textbf{Image}}
+      & \multicolumn{1}{c}{\footnotesize \textbf{Source-only} }
+      & \multicolumn{1}{c}{\footnotesize \textbf{Domain adaptive}}
+      & \multicolumn{1}{c}{\footnotesize \textbf{Ground truth}} \\
+      \rotatebox[origin=c]{90}
+      & \includegraphics{Section3/image/target_0001.png}
+      & \includegraphics{Section3/so/target_0001.png}
+      & \includegraphics{Section3/da/target_0001.png}
+      & \includegraphics{Section3/label/target_0001.png} \\
+      \rotatebox[origin=c]{90}
+      & \includegraphics{Section3/image/target_0002.png}
+      & \includegraphics{Section3/so/target_0002.png}
+      & \includegraphics{Section3/da/target_0002.png}
+      & \includegraphics{Section3/label/target_0002.png} \\
+      \rotatebox[origin=c]{90}
+      & \includegraphics{Section3/image/target_0005.png}
+      & \includegraphics{Section3/so/target_0005.png}
+      & \includegraphics{Section3/da/target_0005.png}
+      & \includegraphics{Section3/label/target_0005.png} \\
+      \rotatebox[origin=c]{90}
+      & \includegraphics{Section3/image/target_0013.png}
+      & \includegraphics{Section3/so/target_0013.png}
+      & \includegraphics{Section3/da/target_0013.png}
+      & \includegraphics{Section3/label/target_0013.png} \\
+    \end{tabularx}
+    \caption{Visualization results on test set.}
+    \label{figure:visualization}
+\end{figure}
 \newpage
